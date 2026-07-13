@@ -51,11 +51,7 @@
     <!-- ======================================================
          HEADER / NAVBAR
     ======================================================= -->
-    <header
-        class="main-header position-absolute w-100 top-0 start-0 z-3"
-        data-aos="fade-down"
-        data-aos-duration="1000"
-    >
+    <header id="mainHeader" class="main-header">
         <div class="container-fluid header-container">
             <div class="d-flex justify-content-between align-items-center">
 
@@ -725,7 +721,7 @@
             <div class="container">
                 <div class="footer-bottom-wrapper">
                     <p class="mb-0">
-                        © <span id="currentYear"></span>
+                        © <span id="year"></span>
                         Royal Ascot Windsor Men's Tailoring. All rights reserved.
                     </p>
 
@@ -749,39 +745,43 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap JavaScript -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    ></script>
+   <!-- Bootstrap JavaScript -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
 
-    <!-- AOS JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 900
-        });
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof AOS !== "undefined") {
+            AOS.init({
+                once: true,
+                duration: 900
+            });
+        }
 
-        // Automatically update footer year
-        document.getElementById("currentYear").textContent =
-            new Date().getFullYear();
+        const yearElement = document.getElementById("year");
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
 
-        // Rotate mobile services arrow
-        const mobileServices = document.getElementById("mobileServices");
-        const mobileDropdownButton = document.querySelector(
-            ".mobile-dropdown-button"
-        );
+        const header = document.getElementById("mainHeader");
+        if (!header) return;
 
-        mobileServices.addEventListener("show.bs.collapse", function () {
-            mobileDropdownButton.classList.add("is-open");
-        });
+        function updateNavbar() {
+            if (window.scrollY > 40) {
+                header.classList.add("nav-scrolled");
+            } else {
+                header.classList.remove("nav-scrolled");
+            }
+        }
 
-        mobileServices.addEventListener("hide.bs.collapse", function () {
-            mobileDropdownButton.classList.remove("is-open");
-        });
-    </script>
+        updateNavbar();
+        window.addEventListener("scroll", updateNavbar, { passive: true });
+    });
+</script>
 
 </body>
 </html>

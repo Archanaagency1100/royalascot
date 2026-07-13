@@ -75,25 +75,32 @@ a {
    HEADER
 ====================================================== */
 .main-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
     padding: 24px 0;
+    background-color: transparent !important;
+    transition: background-color 0.35s ease, padding 0.35s ease;
 }
 
-.header-container {
-    padding-left: 3rem;
-    padding-right: 3rem;
+.main-header.nav-scrolled {
+    padding: 14px 0;
+    background-color: #091613 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
-.brand-wrapper {
-    position: relative;
-    z-index: 2;
-}
 
 .logo-img {
     width: 60px;
     height: auto;
-    object-fit: contain;
+    transition: width 0.35s ease;
 }
 
+.main-header.nav-scrolled .logo-img {
+    width: 50px;
+}
 .logo-text {
     color: var(--gold);
     font-size: 1.05rem;
@@ -324,7 +331,7 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 17px 0;
-    color: rgba(255, 255, 255, 0.72);
+    color: #ffffff;
     background: transparent;
     border: 0;
     font-size: 0.78rem;
@@ -855,13 +862,16 @@ a {
         padding: 18px 0;
     }
 
-    .header-container {
-        padding-left: 24px;
-        padding-right: 24px;
+    .main-header.nav-scrolled {
+        padding: 12px 0;
     }
 
     .logo-img {
-        width: 52px;
+        width: 50px;
+    }
+
+    .main-header.nav-scrolled .logo-img {
+        width: 44px;
     }
 
     .logo-text {
@@ -1159,9 +1169,15 @@ a {
     .mobile-offcanvas .offcanvas-body {
         padding-right: 18px;
         padding-left: 18px;
+   
     }
 }
 
+.offcanvas-body {
+       
+        /* position: absolute; */
+        z-index: 9999;
+    }
 
 /* ======================================================
    REDUCED MOTION ACCESSIBILITY
