@@ -1,91 +1,1181 @@
-/* Custom Essentials */
+/* ======================================================
+   ROOT VARIABLES
+====================================================== */
 :root {
     --gold: #b38e59;
     --gold-hover: #b3946b;
     --dark-bg: #091613;
+    --dark-secondary: #0d1d19;
+    --dark-light: #122520;
+    --white: #ffffff;
+    --text-muted: #9ca7a3;
+    --border-color: rgba(179, 142, 89, 0.25);
+    --transition: all 0.35s ease;
+}
+
+
+/* ======================================================
+   GENERAL STYLING
+====================================================== */
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
+    overflow-x: hidden;
     background-color: var(--dark-bg) !important;
-    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
 }
 
-.font-serif { font-family: 'Cormorant Garamond', serif; }
-.font-sans { font-family: 'Montserrat', sans-serif; }
-.text-gold { color: var(--gold); }
-.tracking { letter-spacing: 1.5px; text-transform: uppercase; }
-.fs-7 { font-size: 0.75rem; }
-.max-w-550 { max-width: 550px; }
-
-/* Logo & Navigation Utilities */
-.logo-box {
-    border: 1px solid var(--gold);
-    color: var(--gold);
+body,
+button,
+input,
+textarea,
+select {
+    font-family: "Montserrat", sans-serif;
 }
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: var(--transition);
+}
+
+.font-serif {
+    font-family: "Cormorant Garamond", serif;
+}
+
+.font-sans {
+    font-family: "Montserrat", sans-serif;
+}
+
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.tracking {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.fs-7 {
+    font-size: 0.75rem;
+}
+
+.max-w-550 {
+    max-width: 550px;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+.main-header {
+    padding: 24px 0;
+}
+
+.header-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.brand-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
 .logo-text {
     color: var(--gold);
-    line-height: 1.2;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.4px;
 }
+
+.logo-text small {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.66rem;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.desktop-navigation a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.desktop-navigation > ul > li > a::after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    margin: auto;
+    content: "";
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.desktop-navigation > ul > li > a:hover::after {
+    width: 100%;
+}
+
 .hover-gold:hover {
     color: var(--gold) !important;
 }
 
-/* Custom Styled Buttons */
+
+/* ======================================================
+   DESKTOP SERVICES DROPDOWN
+====================================================== */
+.nav-dropdown {
+    padding-bottom: 4px;
+}
+
+.services-dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 50%;
+    z-index: 20;
+    min-width: 250px;
+    padding: 12px 0;
+    visibility: hidden;
+    background-color: rgba(9, 22, 19, 0.98);
+    border: 1px solid var(--border-color);
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: var(--transition);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.services-dropdown::before {
+    position: absolute;
+    top: -19px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: "";
+}
+
+.nav-dropdown:hover .services-dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.services-dropdown li {
+    width: 100%;
+}
+
+.services-dropdown li a {
+    display: block;
+    width: 100%;
+    padding: 11px 20px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.73rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.services-dropdown li a:hover {
+    padding-left: 25px;
+    color: var(--gold);
+    background-color: rgba(179, 142, 89, 0.08);
+}
+
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+.btn {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
 .btn-outline-gold {
+    color: var(--gold);
+    background-color: transparent;
+    border: 1px solid var(--gold);
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+    color: var(--dark-bg);
+    background-color: var(--gold);
     border-color: var(--gold);
+    box-shadow: none;
+}
+
+.btn-solid-gold {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.btn-solid-gold:hover,
+.btn-solid-gold:focus {
+    color: var(--dark-bg);
+    background-color: var(--gold-hover);
+    border-color: var(--gold-hover);
+    box-shadow: none;
+}
+
+
+/* ======================================================
+   MOBILE MENU BUTTON
+====================================================== */
+.mobile-menu-button {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    color: var(--gold);
+    background-color: rgba(9, 22, 19, 0.45);
+    border: 1px solid var(--gold);
+    border-radius: 0;
+    font-size: 1.15rem;
+    transition: var(--transition);
+}
+
+.mobile-menu-button:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+}
+
+
+/* ======================================================
+   MOBILE OFFCANVAS
+====================================================== */
+.mobile-offcanvas {
+    width: min(390px, 88vw) !important;
+    color: var(--white);
+    background:
+        linear-gradient(
+            rgba(9, 22, 19, 0.97),
+            rgba(9, 22, 19, 0.97)
+        ),
+        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
+        center / cover no-repeat;
+    border-left: 1px solid var(--border-color);
+}
+
+.mobile-offcanvas .offcanvas-header {
+    min-height: 100px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu-logo {
+    width: 48px;
+    height: auto;
+}
+
+.mobile-brand-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.63rem;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.mobile-close-button {
+    width: 40px;
+    height: 40px;
+    color: var(--gold);
+    background: transparent;
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.mobile-close-button:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+.mobile-offcanvas .offcanvas-body {
+    padding: 16px 24px 28px;
+}
+
+.mobile-navigation > ul > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav-link {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+    color: rgba(255, 255, 255, 0.72);
+    background: transparent;
+    border: 0;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 1.7px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
     color: var(--gold);
 }
-.btn-outline-gold:hover {
-    background-color: var(--gold);
+
+.mobile-dropdown-button i {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-button.is-open i {
+    transform: rotate(180deg);
+}
+
+.mobile-submenu {
+    padding: 0 0 14px 16px;
+}
+
+.mobile-submenu li a {
+    display: block;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mobile-submenu li a:hover {
+    color: var(--gold);
+}
+
+.mobile-menu-bottom {
+    padding-top: 40px;
+}
+
+.mobile-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.mobile-contact-details a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+
+.mobile-contact-details a i {
+    width: 15px;
+    color: var(--gold);
+}
+
+.mobile-contact-details a:hover {
+    color: var(--gold);
+}
+
+.mobile-social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.mobile-social-links a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+}
+
+.mobile-social-links a:hover {
     color: var(--dark-bg);
+    background-color: var(--gold);
     border-color: var(--gold);
 }
-.btn-solid-gold {
-    background-color: var(--gold);
-    color: var(--dark-bg);
-}
-.btn-solid-gold:hover {
-    background-color: var(--gold-hover);
-    color: var(--dark-bg);
-}
-
-/* Decorative Divider lines */
-/* Centered Decorative Divider */
-.divider-fleur {
-    position: relative;
-    width: fit-content;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
 
 
-
-/* Hero Graphic & Layout Composition */
+/* ======================================================
+   HERO SECTION
+====================================================== */
 .hero-section {
     position: relative;
     min-height: 100vh;
-    /* background: url('/assets/img/ChatGPT\ Image\ Jul\ 13\,\ 2026\,\ 01_58_18\ PM.png right / cover; */
+    overflow: hidden;
+    background-color: var(--dark-bg);
 }
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    background: linear-gradient(to right, rgba(9, 22, 19, 0.98) 40%, rgba(9, 22, 19, 0.75) 65%, rgba(9, 22, 19, 0.1) 100%);
-}
-.right-img{
-    position: relative;
-    z-index: 99;
-   background: url('/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png') no-repeat center center;
-   background-size: cover;
-   height: 100vh;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        rgba(9, 22, 19, 0.98) 40%,
+        rgba(9, 22, 19, 0.75) 65%,
+        rgba(9, 22, 19, 0.1) 100%
+    );
 }
 
-@media (max-width: 991px) {
+.hero-container {
+    padding: 0;
+}
+
+.hero-content-column {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 145px 40px 65px 5rem;
+}
+
+.hero-heading {
+    max-width: 750px;
+    color: var(--white);
+    font-size: clamp(3.25rem, 5.3vw, 6.2rem);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -1px;
+}
+
+.hero-divider {
+    width: min(50%, 430px);
+    margin: 6px 0 20px;
+}
+
+.hero-divider img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.55) !important;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.hero-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    white-space: nowrap;
+}
+
+.hero-features {
+    border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.hero-features > div {
+    font-size: 0.7rem;
+}
+
+.hero-footer-content > p:first-child {
+    font-size: 1.15rem;
+}
+
+.hero-footer-content > p:last-child {
+    max-width: 750px;
+    line-height: 1.7;
+}
+
+.right-img {
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    background:
+        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
+        no-repeat center center;
+    background-size: cover;
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+.site-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #07110f;
+}
+
+.site-footer::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold),
+        transparent
+    );
+}
+
+.footer-top {
+    position: relative;
+    padding: 85px 0 0;
+}
+
+.footer-top::after {
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    width: 380px;
+    height: 380px;
+    content: "";
+    background: radial-gradient(
+        circle,
+        rgba(179, 142, 89, 0.08),
+        transparent 68%
+    );
+    pointer-events: none;
+}
+
+.footer-brand {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-logo {
+    width: 65px;
+    height: auto;
+}
+
+.footer-logo-text {
+    color: var(--gold);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.footer-logo-text small {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.64rem;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.footer-description {
+    max-width: 390px;
+    margin-bottom: 28px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    line-height: 1.9;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-links a {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+}
+
+.footer-social-links a:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    position: relative;
+    margin-bottom: 28px;
+    padding-bottom: 13px;
+    color: var(--white);
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.footer-heading::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 1px;
+    content: "";
+    background-color: var(--gold);
+}
+
+.footer-links li {
+    margin-bottom: 13px;
+}
+
+.footer-links li a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.footer-links li a::before {
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    margin-right: 0;
+    content: "";
+    vertical-align: middle;
+    background-color: var(--gold);
+    transition: var(--transition);
+}
+
+.footer-links li a:hover {
+    color: var(--gold);
+}
+
+.footer-links li a:hover::before {
+    width: 13px;
+    margin-right: 8px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    line-height: 1.7;
+}
+
+.footer-contact li i {
+    width: 15px;
+    margin-top: 5px;
+    color: var(--gold);
+}
+
+.footer-contact li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+.footer-contact li a:hover {
+    color: var(--gold);
+}
+
+
+/* Footer CTA */
+.footer-cta {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 70px;
+    padding: 35px 40px;
+    background-color: rgba(179, 142, 89, 0.07);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+}
+
+.footer-cta-small {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--gold);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-cta h2 {
+    color: var(--white);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 24px 0;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.72rem;
+}
+
+.footer-policy-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-policy-links a {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.72rem;
+    text-decoration: none;
+}
+
+.footer-policy-links a:hover {
+    color: var(--gold);
+}
+
+
+/* ======================================================
+   FLOATING WHATSAPP
+====================================================== */
+.floating-whatsapp {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 100;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    font-size: 1.65rem;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.floating-whatsapp:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold-hover);
+    transform: translateY(-4px);
+}
+
+
+/* ======================================================
+   LARGE LAPTOPS
+====================================================== */
+@media (max-width: 1399px) {
+    .header-container {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .desktop-navigation ul {
+        gap: 1.25rem !important;
+    }
+
+    .hero-content {
+        padding-left: 3.5rem;
+        padding-right: 25px;
+    }
+
+    .hero-heading {
+        font-size: clamp(3.1rem, 5vw, 5.5rem);
+    }
+
+    .hero-actions {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    .hero-actions .btn {
+        min-width: 320px;
+    }
+}
+
+
+/* ======================================================
+   TABLET AND SMALL LAPTOP
+====================================================== */
+@media (max-width: 1199px) {
+    .hero-content {
+        padding-left: 2.5rem;
+    }
+
+    .hero-heading {
+        font-size: clamp(3rem, 5.2vw, 4.8rem);
+    }
+
+    .hero-divider {
+        width: 65%;
+    }
+}
+
+
+/* ======================================================
+   TABLET / MOBILE HERO
+====================================================== */
+@media (max-width: 991.98px) {
+    .main-header {
+        padding: 18px 0;
+    }
+
+    .header-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .logo-img {
+        width: 52px;
+    }
+
+    .logo-text {
+        font-size: 0.95rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+    }
+
     .hero-overlay {
-        background: rgba(9, 22, 19, 0.9); /* Dark screen overlay optimization for mobile readability */
+        z-index: 1;
+        background: linear-gradient(
+            to bottom,
+            rgba(9, 22, 19, 0.95) 0%,
+            rgba(9, 22, 19, 0.89) 56%,
+            rgba(9, 22, 19, 0.35) 100%
+        );
+    }
+
+    .hero-container {
+        position: relative;
+        background:
+            linear-gradient(
+                rgba(9, 22, 19, 0.64),
+                rgba(9, 22, 19, 0.88)
+            ),
+            url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
+            center top / cover no-repeat;
+    }
+
+    .hero-content-column {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 145px 40px 70px;
+    }
+
+    .hero-heading {
+        max-width: 750px;
+        font-size: clamp(3.2rem, 8vw, 5rem);
+        line-height: 0.94;
+    }
+
+    .hero-description {
+        max-width: 620px;
+    }
+
+    .hero-actions {
+        flex-direction: row !important;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        min-width: auto;
+    }
+
+    .right-img {
+        z-index: 2;
+        min-height: 600px;
+        background-position: center top;
+    }
+
+    .footer-top {
+        padding-top: 70px;
+    }
+
+    .footer-cta {
+        margin-top: 55px;
+    }
+}
+
+
+/* ======================================================
+   MOBILE PHONES
+====================================================== */
+@media (max-width: 767.98px) {
+    .header-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .logo-img {
+        width: 46px;
+    }
+
+    .logo-text {
+        font-size: 0.84rem;
+    }
+
+    .logo-text small {
+        font-size: 0.56rem;
+        letter-spacing: 1px;
+    }
+
+    .mobile-menu-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .hero-content {
+        padding: 130px 22px 55px;
+    }
+
+    .hero-heading {
+        font-size: clamp(2.65rem, 12vw, 4.2rem);
+        line-height: 0.95;
+    }
+
+    .hero-divider {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        flex-direction: column !important;
+        margin-bottom: 2.2rem !important;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 54px;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+        font-size: 0.68rem;
+        white-space: normal;
+    }
+
+    .hero-features {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 14px !important;
+    }
+
+    .hero-features > div {
+        font-size: 0.68rem;
+    }
+
+    .hero-footer-content > p:first-child {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .hero-footer-content > p:last-child {
+        font-size: 0.73rem;
+    }
+
+    .right-img {
+        min-height: 520px;
+        background-position: 62% top;
+    }
+
+    .footer-top {
+        padding-top: 60px;
+    }
+
+    .footer-heading {
+        margin-bottom: 22px;
+    }
+
+    .footer-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 45px;
+        padding: 30px 24px;
+    }
+
+    .footer-cta .btn {
+        width: 100%;
+    }
+
+    .footer-bottom-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-policy-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .floating-whatsapp {
+        right: 17px;
+        bottom: 17px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ======================================================
+   SMALL MOBILE PHONES
+====================================================== */
+@media (max-width: 480px) {
+    .main-header {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brand-wrapper {
+        gap: 10px !important;
+    }
+
+    .logo-img {
+        width: 42px;
+    }
+
+    .logo-text {
+        max-width: 145px;
+        font-size: 0.78rem;
+    }
+
+    .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-content {
+        padding: 115px 17px 50px;
+    }
+
+    .hero-heading {
+        font-size: clamp(2.35rem, 12.7vw, 3.5rem);
+        line-height: 0.96;
+    }
+
+    .hero-divider {
+        width: 90%;
+    }
+
+    .hero-description {
+        font-size: 0.88rem;
+    }
+
+    .hero-actions .btn {
+        font-size: 0.62rem;
+        letter-spacing: 1.1px;
+    }
+
+    .right-img {
+        min-height: 440px;
+        background-position: 64% top;
+    }
+
+    .footer-logo {
+        width: 55px;
+    }
+
+    .footer-logo-text {
+        font-size: 1.05rem;
+    }
+
+    .footer-cta h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* ======================================================
+   VERY SMALL MOBILE PHONES
+====================================================== */
+@media (max-width: 360px) {
+    .logo-text {
+        max-width: 120px;
+        font-size: 0.7rem;
+    }
+
+    .logo-text small {
+        font-size: 0.5rem;
+    }
+
+    .hero-heading {
+        font-size: 2.2rem;
+    }
+
+    .hero-actions .btn {
+        font-size: 0.58rem;
+    }
+
+    .mobile-offcanvas .offcanvas-header,
+    .mobile-offcanvas .offcanvas-body {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+}
+
+
+/* ======================================================
+   REDUCED MOTION ACCESSIBILITY
+====================================================== */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
