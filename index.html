@@ -1,787 +1,1447 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-        Bespoke Men's Tailoring in Dubai Marina | Royal Ascot Windsor
-    </title>
+    <title>Bespoke Men's Tailoring in Dubai Marina | Royal Ascot Windsor</title>
 
     <!-- SEO Meta Tags -->
     <meta
-        name="description"
-        content="Premium custom suits, shirts, tuxedos, and alterations at Royal Ascot Windsor Men's Tailoring in Dubai Marina."
-    >
+      name="description"
+      content="Premium custom suits, shirts, tuxedos, and alterations at Royal Ascot Windsor Men's Tailoring in Dubai Marina."
+    />
 
     <!-- Bootstrap 5 CSS -->
     <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- AOS Animation CSS -->
-    <link
-        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-        rel="stylesheet"
-    >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    >
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
 
-<body class="bg-dark text-white">
-
+  <body class="bg-dark text-white">
     <!-- ======================================================
          HEADER / NAVBAR
     ======================================================= -->
     <header id="mainHeader" class="main-header">
-        <div class="container-fluid header-container">
-            <div class="d-flex justify-content-between align-items-center">
+      <div class="container-fluid header-container">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a
+            href="#home"
+            class="brand-wrapper d-flex align-items-center gap-3 text-decoration-none"
+          >
+            <img
+              src="/assets/img/cropped-royal.png"
+              alt="Royal Ascot Windsor Logo"
+              class="logo-img img-fluid"
+            />
 
-                <!-- Logo -->
+            <span class="logo-text font-serif">
+              Royal Ascot Windsor
+
+              <small class="d-block text-white-50 font-sans">
+                Men's Tailoring
+              </small>
+            </span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <nav class="desktop-navigation d-none d-lg-block">
+            <ul
+              class="d-flex align-items-center list-unstyled gap-4 mb-0 font-sans tracking"
+            >
+              <li>
+                <a href="#home" class="text-gold text-decoration-none small">
+                  Home
+                </a>
+              </li>
+
+              <li>
                 <a
-                    href="#home"
-                    class="brand-wrapper d-flex align-items-center gap-3 text-decoration-none"
+                  href="#about"
+                  class="text-white-50 text-decoration-none small hover-gold"
                 >
-                    <img
-                        src="/assets/img/cropped-royal.png"
-                        alt="Royal Ascot Windsor Logo"
-                        class="logo-img img-fluid"
-                    >
+                  About Us
+                </a>
+              </li>
 
-                    <span class="logo-text font-serif">
-                        Royal Ascot Windsor
-
-                        <small class="d-block text-white-50 font-sans">
-                            Men's Tailoring
-                        </small>
-                    </span>
+              <li class="nav-dropdown position-relative">
+                <a
+                  href="#services"
+                  class="text-white-50 text-decoration-none small hover-gold"
+                >
+                  Services
+                  <i class="fas fa-chevron-down ms-1"></i>
                 </a>
 
-                <!-- Desktop Navigation -->
-                <nav class="desktop-navigation d-none d-lg-block">
-                    <ul class="d-flex align-items-center list-unstyled gap-4 mb-0 font-sans tracking">
-                        <li>
-                            <a
-                                href="#home"
-                                class="text-gold text-decoration-none small"
-                            >
-                                Home
-                            </a>
-                        </li>
+                <ul class="services-dropdown list-unstyled mb-0">
+                  <li>
+                    <a href="#services"> Bespoke Suits </a>
+                  </li>
 
-                        <li>
-                            <a
-                                href="#about"
-                                class="text-white-50 text-decoration-none small hover-gold"
-                            >
-                                About Us
-                            </a>
-                        </li>
+                  <li>
+                    <a href="#services"> Made-to-Measure Shirts </a>
+                  </li>
 
-                        <li class="nav-dropdown position-relative">
-                            <a
-                                href="#services"
-                                class="text-white-50 text-decoration-none small hover-gold"
-                            >
-                                Services
-                                <i class="fas fa-chevron-down ms-1"></i>
-                            </a>
+                  <li>
+                    <a href="#services"> Wedding Suits </a>
+                  </li>
 
-                            <ul class="services-dropdown list-unstyled mb-0">
-                                <li>
-                                    <a href="#services">
-                                        Bespoke Suits
-                                    </a>
-                                </li>
+                  <li>
+                    <a href="#services"> Tuxedos </a>
+                  </li>
 
-                                <li>
-                                    <a href="#services">
-                                        Made-to-Measure Shirts
-                                    </a>
-                                </li>
+                  <li>
+                    <a href="#services"> Alterations </a>
+                  </li>
+                </ul>
+              </li>
 
-                                <li>
-                                    <a href="#services">
-                                        Wedding Suits
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#services">
-                                        Tuxedos
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#services">
-                                        Alterations
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#fabrics"
-                                class="text-white-50 text-decoration-none small hover-gold"
-                            >
-                                Fabrics
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#contact"
-                                class="text-white-50 text-decoration-none small hover-gold"
-                            >
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- Desktop Appointment Button -->
-                <div class="d-none d-lg-block">
-                    <a
-                        href="#book"
-                        class="btn btn-outline-gold rounded-0 small tracking"
-                    >
-                        Book Appointment
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button
-                    class="mobile-menu-button d-flex d-lg-none align-items-center justify-content-center"
-                    type="button"
-                    data-bs-toggle="offcanvas"
-                    data-bs-target="#mobileMenu"
-                    aria-controls="mobileMenu"
-                    aria-label="Open navigation menu"
+              <li>
+                <a
+                  href="#fabrics"
+                  class="text-white-50 text-decoration-none small hover-gold"
                 >
-                    <i class="fas fa-bars"></i>
-                </button>
+                  Fabrics
+                </a>
+              </li>
 
-            </div>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-white-50 text-decoration-none small hover-gold"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Desktop Appointment Button -->
+          <div class="d-none d-lg-block">
+            <a
+              href="#book"
+              class="btn btn-outline-gold rounded-0 small tracking"
+            >
+              Book Appointment
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="mobile-menu-button d-flex d-lg-none align-items-center justify-content-center"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+            aria-label="Open navigation menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+      </div>
     </header>
 
     <!-- ======================================================
          MOBILE OFFCANVAS MENU
     ======================================================= -->
     <div
-        class="offcanvas offcanvas-end mobile-offcanvas"
-        tabindex="-1"
-        id="mobileMenu"
-        aria-labelledby="mobileMenuLabel"
+      class="offcanvas offcanvas-end mobile-offcanvas"
+      tabindex="-1"
+      id="mobileMenu"
+      aria-labelledby="mobileMenuLabel"
     >
-        <div class="offcanvas-header">
+      <div class="offcanvas-header">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            src="/assets/img/cropped-royal.png"
+            alt="Royal Ascot Windsor Logo"
+            class="mobile-menu-logo"
+          />
 
-            <div class="d-flex align-items-center gap-3">
-                <img
-                    src="/assets/img/cropped-royal.png"
-                    alt="Royal Ascot Windsor Logo"
-                    class="mobile-menu-logo"
-                >
-
-                <div>
-                    <h5
-                        class="offcanvas-title font-serif text-gold mb-0"
-                        id="mobileMenuLabel"
-                    >
-                        Royal Ascot Windsor
-                    </h5>
-
-                    <span class="mobile-brand-subtitle">
-                        Men's Tailoring
-                    </span>
-                </div>
-            </div>
-
-            <button
-                type="button"
-                class="mobile-close-button"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close navigation menu"
+          <div>
+            <h5
+              class="offcanvas-title font-serif text-gold mb-0"
+              id="mobileMenuLabel"
             >
-                <i class="fas fa-times"></i>
-            </button>
+              Royal Ascot Windsor
+            </h5>
+
+            <span class="mobile-brand-subtitle"> Men's Tailoring </span>
+          </div>
         </div>
 
-        <div class="offcanvas-body d-flex flex-column">
+        <button
+          type="button"
+          class="mobile-close-button"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close navigation menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
 
-            <nav class="mobile-navigation">
-                <ul class="list-unstyled mb-0">
-                    <li>
-                        <a
-                            href="#home"
-                            class="mobile-nav-link active"
-                            data-bs-dismiss="offcanvas"
-                        >
-                            Home
-                        </a>
-                    </li>
+      <div class="offcanvas-body d-flex flex-column">
+        <nav class="mobile-navigation">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a
+                href="#home"
+                class="mobile-nav-link active"
+                data-bs-dismiss="offcanvas"
+              >
+                Home
+              </a>
+            </li>
 
-                    <li>
-                        <a
-                            href="#about"
-                            class="mobile-nav-link"
-                            data-bs-dismiss="offcanvas"
-                        >
-                            About Us
-                        </a>
-                    </li>
+            <li>
+              <a
+                href="#about"
+                class="mobile-nav-link"
+                data-bs-dismiss="offcanvas"
+              >
+                About Us
+              </a>
+            </li>
 
-                    <li>
-                        <button
-                            class="mobile-nav-link mobile-dropdown-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#mobileServices"
-                            aria-expanded="false"
-                            aria-controls="mobileServices"
-                        >
-                            <span>Services</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </button>
+            <li>
+              <button
+                class="mobile-nav-link mobile-dropdown-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mobileServices"
+                aria-expanded="false"
+                aria-controls="mobileServices"
+              >
+                <span>Services</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
 
-                        <div class="collapse" id="mobileServices">
-                            <ul class="mobile-submenu list-unstyled">
-                                <li>
-                                    <a
-                                        href="#services"
-                                        data-bs-dismiss="offcanvas"
-                                    >
-                                        Bespoke Suits
-                                    </a>
-                                </li>
+              <div class="collapse" id="mobileServices">
+                <ul class="mobile-submenu list-unstyled">
+                  <li>
+                    <a href="#services" data-bs-dismiss="offcanvas">
+                      Bespoke Suits
+                    </a>
+                  </li>
 
-                                <li>
-                                    <a
-                                        href="#services"
-                                        data-bs-dismiss="offcanvas"
-                                    >
-                                        Made-to-Measure Shirts
-                                    </a>
-                                </li>
+                  <li>
+                    <a href="#services" data-bs-dismiss="offcanvas">
+                      Made-to-Measure Shirts
+                    </a>
+                  </li>
 
-                                <li>
-                                    <a
-                                        href="#services"
-                                        data-bs-dismiss="offcanvas"
-                                    >
-                                        Wedding Suits
-                                    </a>
-                                </li>
+                  <li>
+                    <a href="#services" data-bs-dismiss="offcanvas">
+                      Wedding Suits
+                    </a>
+                  </li>
 
-                                <li>
-                                    <a
-                                        href="#services"
-                                        data-bs-dismiss="offcanvas"
-                                    >
-                                        Tuxedos
-                                    </a>
-                                </li>
+                  <li>
+                    <a href="#services" data-bs-dismiss="offcanvas">
+                      Tuxedos
+                    </a>
+                  </li>
 
-                                <li>
-                                    <a
-                                        href="#services"
-                                        data-bs-dismiss="offcanvas"
-                                    >
-                                        Alterations
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a
-                            href="#fabrics"
-                            class="mobile-nav-link"
-                            data-bs-dismiss="offcanvas"
-                        >
-                            Fabrics
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="#contact"
-                            class="mobile-nav-link"
-                            data-bs-dismiss="offcanvas"
-                        >
-                            Contact
-                        </a>
-                    </li>
+                  <li>
+                    <a href="#services" data-bs-dismiss="offcanvas">
+                      Alterations
+                    </a>
+                  </li>
                 </ul>
-            </nav>
+              </div>
+            </li>
 
-            <div class="mobile-menu-bottom mt-auto">
+            <li>
+              <a
+                href="#fabrics"
+                class="mobile-nav-link"
+                data-bs-dismiss="offcanvas"
+              >
+                Fabrics
+              </a>
+            </li>
 
-                <a
-                    href="#book"
-                    class="btn btn-solid-gold rounded-0 w-100 py-3 tracking"
-                    data-bs-dismiss="offcanvas"
-                >
-                    Book Appointment
-                </a>
+            <li>
+              <a
+                href="#contact"
+                class="mobile-nav-link"
+                data-bs-dismiss="offcanvas"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-                <div class="mobile-contact-details">
-                    <a href="tel:+971000000000">
-                        <i class="fas fa-phone"></i>
-                        +971 00 000 0000
-                    </a>
+        <div class="mobile-menu-bottom mt-auto">
+          <a
+            href="#book"
+            class="btn btn-solid-gold rounded-0 w-100 py-3 tracking"
+            data-bs-dismiss="offcanvas"
+          >
+            Book Appointment
+          </a>
 
-                    <a href="mailto:info@royalascotwindsor.com">
-                        <i class="fas fa-envelope"></i>
-                        info@royalascotwindsor.com
-                    </a>
-                </div>
+          <div class="mobile-contact-details">
+            <a href="tel:+971 50 113 9891">
+              <i class="fas fa-phone"></i>
+              +971 50 113 9891
+            </a>
 
-                <div class="mobile-social-links">
-                    <a href="#" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+            <a href="mailto:info@royalascotwindsor.com">
+              <i class="fas fa-envelope"></i>
+              info@royalascotwindsor.com
+            </a>
+          </div>
 
-                    <a href="#" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
+          <div class="mobile-social-links">
+            <a href="https://www.instagram.com/royalascotwindsor2024/" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
 
-                    <a href="#" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+            <a href="#" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
 
-            </div>
+            <a href="#" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- ======================================================
          HERO SECTION
     ======================================================= -->
-    <section
-        class="hero-section min-vh-100 d-flex align-items-center"
-        id="home"
-    >
-        <div class="hero-overlay"></div>
+    <section class="hero-section d-flex align-items-center" id="home">
+      <div class="hero-overlay"></div>
 
-        <div class="container-fluid position-relative z-2 hero-container">
-            <div class="row g-0 min-vh-100">
+      <div class="container-fluid position-relative z-2 hero-container">
+        <div class="row g-0 min-vh-100">
+          <!-- Hero Content -->
+          <div class="col-12 col-lg-6 hero-content-column">
+            <div class="hero-content">
+              <!-- Headline -->
+              <h1
+                class="font-serif display-1 mb-3 hero-heading"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
+                <span class="text-gold">
+                  Bespoke &amp;
+                  <br />
+                  Made-to-Measure
+                </span>
 
-                <!-- Hero Content -->
-                <div class="col-12 col-lg-6 hero-content-column">
-                    <div class="hero-content">
+                <br />
 
-                        <!-- Headline -->
-                        <h1
-                            class="font-serif display-1 mb-3 hero-heading"
-                            data-aos="fade-right"
-                            data-aos-duration="1000"
-                        >
-                            <span class="text-gold">
-                                Bespoke &amp;
-                                <br>
-                                Made-to-Measure
-                            </span>
+                Men's Tailoring in
+                <br />
 
-                            <br>
+                Dubai Marina
+              </h1>
 
-                            Men's Tailoring in
-                            <br>
+              <!-- Decorative Divider -->
+              <div
+                class="hero-divider"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                <img
+                  src="/assets/img/vecteezy_aesthetic-golden-line_43006867.png"
+                  alt="Decorative Golden Divider"
+                  class="img-fluid"
+                />
+              </div>
 
-                            Dubai Marina
-                        </h1>
+              <!-- Description -->
+              <p
+                class="text-secondary fw-light mb-4 max-w-550 hero-description"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+              >
+                Custom suits, shirts, wedding suits, tuxedos, alterations and
+                premium fabrics, crafted for gentlemen who value fit, style and
+                detail.
+              </p>
 
-                        <!-- Decorative Divider -->
-                        <div
-                            class="hero-divider"
-                            data-aos="fade-right"
-                            data-aos-delay="200"
-                            data-aos-duration="1000"
-                        >
-                            <img
-                                src="/assets/img/vecteezy_aesthetic-golden-line_43006867.png"
-                                alt="Decorative Golden Divider"
-                                class="img-fluid"
-                            >
-                        </div>
+              <!-- Action Buttons -->
+              <div
+                class="hero-actions d-flex flex-column flex-sm-row gap-3 mb-5"
+                data-aos="fade-up"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+              >
+                <a
+                  href="#book"
+                  class="btn btn-solid-gold rounded-0 px-4 py-3 font-sans tracking"
+                >
+                  <i class="far fa-calendar-alt me-2"></i>
+                  Book a Free Consultation
+                </a>
 
-                        <!-- Description -->
-                        <p
-                            class="text-secondary fw-light mb-4 max-w-550 hero-description"
-                            data-aos="fade-right"
-                            data-aos-delay="300"
-                            data-aos-duration="1000"
-                        >
-                            Custom suits, shirts, wedding suits, tuxedos,
-                            alterations and premium fabrics, crafted for
-                            gentlemen who value fit, style and detail.
-                        </p>
+                <a
+                  href="https://wa.me/yournumber"
+                  class="btn btn-outline-gold rounded-0 px-4 py-3 font-sans tracking"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>
+                  WhatsApp Us Now
+                </a>
+              </div>
 
-                        <!-- Action Buttons -->
-                        <div
-                            class="hero-actions d-flex flex-column flex-sm-row gap-3 mb-5"
-                            data-aos="fade-up"
-                            data-aos-delay="400"
-                            data-aos-duration="1000"
-                        >
-                            <a
-                                href="#book"
-                                class="btn btn-solid-gold rounded-0 px-4 py-3 font-sans tracking"
-                            >
-                                <i class="far fa-calendar-alt me-2"></i>
-                                Book a Free Consultation
-                            </a>
-
-                            <a
-                                href="https://wa.me/yournumber"
-                                class="btn btn-outline-gold rounded-0 px-4 py-3 font-sans tracking"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i class="fab fa-whatsapp me-2"></i>
-                                WhatsApp Us Now
-                            </a>
-                        </div>
-
-                        <!-- Features -->
-                        <div
-                            class="hero-features d-flex flex-wrap gap-4 border-bottom border-secondary pb-4 mb-4 max-w-550"
-                            data-aos="fade-up"
-                            data-aos-delay="500"
-                            data-aos-duration="1000"
-                        >
-                            <div class="d-flex align-items-center gap-2 small tracking text-secondary">
-                                <i class="fas fa-scroll text-gold"></i>
-                                Premium Fabrics
-                            </div>
-
-                            <div class="d-flex align-items-center gap-2 small tracking text-secondary">
-                                <i class="fas fa-ruler-combined text-gold"></i>
-                                Personal Fittings
-                            </div>
-
-                            <div class="d-flex align-items-center gap-2 small tracking text-secondary">
-                                <i class="fas fa-scissors text-gold"></i>
-                                Expert Tailoring
-                            </div>
-                        </div>
-
-                        <!-- Location -->
-                        <div
-                            class="hero-footer-content"
-                            data-aos="fade-up"
-                            data-aos-delay="600"
-                            data-aos-duration="1000"
-                        >
-                            <p class="font-serif text-gold mb-2">
-                                Premium fabrics. Personal fittings. Expert
-                                tailoring in the heart of Dubai Marina.
-                            </p>
-
-                            <p class="text-secondary small d-flex gap-2 mb-0">
-                                <i class="fas fa-map-marker-alt text-gold mt-1"></i>
-
-                                <span>
-                                    Located at Marina Diamond 1, Dubai Marina |
-                                    Doorstep tailoring available across Dubai
-                                    Marina, JBR, JLT, Palm Jumeirah and Emirates
-                                    Hills.
-                                </span>
-                            </p>
-                        </div>
-
-                    </div>
+              <!-- Features -->
+              <div
+                class="hero-features d-flex flex-wrap gap-4 border-bottom border-secondary pb-4 mb-4 max-w-550"
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="1000"
+              >
+                <div
+                  class="d-flex align-items-center gap-2 small tracking text-secondary"
+                >
+                  <i class="fas fa-scroll text-gold"></i>
+                  Premium Fabrics
                 </div>
 
-                <!-- Hero Image -->
                 <div
-                    class="col-12 col-lg-6 right-img"
-                    role="img"
-                    aria-label="Bespoke men's tailoring in Dubai Marina"
-                ></div>
+                  class="d-flex align-items-center gap-2 small tracking text-secondary"
+                >
+                  <i class="fas fa-ruler-combined text-gold"></i>
+                  Personal Fittings
+                </div>
 
+                <div
+                  class="d-flex align-items-center gap-2 small tracking text-secondary"
+                >
+                  <i class="fas fa-scissors text-gold"></i>
+                  Expert Tailoring
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div
+                class="hero-footer-content"
+                data-aos="fade-up"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+              >
+                <p class="font-serif text-gold mb-2">
+                  Premium fabrics. Personal fittings. Expert tailoring in the
+                  heart of Dubai Marina.
+                </p>
+
+                <p class="text-secondary small d-flex gap-2 mb-0">
+                  <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+
+                  <span>
+                    Located at Marina Diamond 1, Dubai Marina | Doorstep
+                    tailoring available across Dubai Marina, JBR, JLT, Palm
+                    Jumeirah and Emirates Hills.
+                  </span>
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div
+            class="col-12 col-lg-6 right-img"
+            role="img"
+            aria-label="Bespoke men's tailoring in Dubai Marina"
+          ></div>
         </div>
+      </div>
     </section>
+
+    <!-- =====================================================
+     BESPOKE INTRO SECTION
+===================================================== -->
+    <section class="bespoke-intro py-5">
+      <div class="container py-lg-5">
+        <div class="row align-items-stretch">
+          <!-- Left Content -->
+          <div class="col-12 col-lg-7 d-flex align-items-center">
+            <div class="bespoke-copy py-4 py-lg-5 pe-lg-5">
+              <div class="section-eyebrow mb-4">
+                Marina Diamond 1, Dubai Marina
+              </div>
+
+              <h2 class="bespoke-title mb-4">
+                Cut to the measure of the man who
+                <em>builds the skyline.</em>
+              </h2>
+
+              <p class="bespoke-description mb-4">
+                Royal Ascot Windsor is a bespoke house for suits, shirts and
+                occasionwear, hand-finished by master tailors and fitted in our
+                Marina atelier — or wherever your day happens to take you.
+              </p>
+
+              <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                <a href="#contact" class="btn btn-gold rounded-0 px-4 py-3">
+                  Book a Free Consultation
+                </a>
+
+                <a
+                  href="https://wa.me/yournumber"
+                  class="btn btn-outline-gold rounded-0 px-4 py-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>
+                  WhatsApp Us Now
+                </a>
+              </div>
+
+              <!-- Statistics -->
+              <div class="row g-4 bespoke-stats mt-4 pt-4">
+                <div class="col-6 col-md-4">
+                  <strong>6</strong>
+                  <span>Fitting stages</span>
+                </div>
+
+                <div class="col-6 col-md-4">
+                  <strong>30+</strong>
+                  <span>Mills on file</span>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <strong>8</strong>
+                  <span>Dubai districts, at your door</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Pattern Illustration -->
+          <div class="col-12 col-lg-5">
+            <div class="pattern-art h-100">
+              <div class="pattern-label">
+                Pattern No. RAW—0138 · Dubai Marina
+              </div>
+
+              <div class="pattern-note">
+                Grainline parallel to selvedge
+                <br />
+                All seams 1.5cm · Hand finished
+              </div>
+
+              <svg
+                viewBox="0 0 500 620"
+                preserveAspectRatio="xMidYMid meet"
+                aria-label="Bespoke suit pattern illustration"
+              >
+                <defs>
+                  <marker
+                    id="patternArrow"
+                    markerWidth="8"
+                    markerHeight="8"
+                    refX="4"
+                    refY="4"
+                    orient="auto"
+                  >
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#C79A5E" />
+                  </marker>
+                </defs>
+
+                <g stroke="#C79A5E" stroke-width="1" fill="none" opacity="0.9">
+                  <path
+                    d="M180 90 L150 130 L140 260 L150 420 L170 560
+                                   M320 90 L350 130 L360 260 L350 420 L330 560"
+                  />
+
+                  <path d="M180 90 C210 60 290 60 320 90" />
+
+                  <path
+                    d="M180 90 L165 150 L200 175 L250 155
+                                   L300 175 L335 150 L320 90"
+                  />
+
+                  <path
+                    d="M200 175 L195 560"
+                    stroke-dasharray="2 6"
+                    opacity="0.5"
+                  />
+
+                  <path
+                    d="M300 175 L305 560"
+                    stroke-dasharray="2 6"
+                    opacity="0.5"
+                  />
+
+                  <line
+                    x1="150"
+                    y1="260"
+                    x2="350"
+                    y2="260"
+                    stroke-dasharray="2 6"
+                    opacity="0.4"
+                  />
+
+                  <line
+                    x1="150"
+                    y1="420"
+                    x2="350"
+                    y2="420"
+                    stroke-dasharray="2 6"
+                    opacity="0.4"
+                  />
+
+                  <circle
+                    cx="200"
+                    cy="230"
+                    r="2.5"
+                    fill="#C79A5E"
+                    stroke="none"
+                  />
+
+                  <circle
+                    cx="200"
+                    cy="270"
+                    r="2.5"
+                    fill="#C79A5E"
+                    stroke="none"
+                  />
+
+                  <circle
+                    cx="200"
+                    cy="310"
+                    r="2.5"
+                    fill="#C79A5E"
+                    stroke="none"
+                  />
+
+                  <path d="M250 300 L250 340" marker-end="url(#patternArrow)" />
+
+                  <path d="M250 300 L250 260" marker-end="url(#patternArrow)" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     FABRIC MILLS MARQUEE
+===================================================== -->
+
+<!-- Fabric Marquee -->
+<div class="fabric-marquee">
+  <div class="fabric-track">
+    <span>Loro Piana</span>
+    <span>Scabal</span>
+    <span>Holland &amp; Sherry</span>
+    <span>Dormeuil</span>
+    <span>Ariston Napoli</span>
+    <span>Ermenegildo Zegna</span>
+
+    <!-- Repeated for continuous scrolling -->
+    <span>Loro Piana</span>
+    <span>Scabal</span>
+    <span>Holland &amp; Sherry</span>
+    <span>Dormeuil</span>
+    <span>Ariston Napoli</span>
+    <span>Ermenegildo Zegna</span>
+  </div>
+</div>
+
+<!-- Services Section -->
+<section id="services" class="services-section py-5">
+  <div class="container py-lg-5">
+
+    <!-- Section Heading -->
+    <div class="row mb-5">
+      <div class="col-12 col-lg-7">
+
+        <div class="section-eyebrow mb-3">
+          The Order Book
+        </div>
+
+        <h2 class="services-title mb-3">
+          Six ways to be dressed properly.
+        </h2>
+
+        <p class="services-intro mb-0">
+          Every garment starts as a consultation, not a catalogue.
+          Choose where you'd like to begin.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Service Cards -->
+    <div class="row g-0 services-grid">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 01 — Bespoke
+          </span>
+
+          <h3>Bespoke Suits</h3>
+
+          <p>
+            Built from a personal block and paper pattern, hand-cut for a fit
+            no rack can offer.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 02 — M.T.M.
+          </span>
+
+          <h3>Custom Suits</h3>
+
+          <p>
+            Made-to-measure tailoring with full control over cloth, canvas,
+            lapel and lining.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 03 — Shirting
+          </span>
+
+          <h3>Custom Shirts</h3>
+
+          <p>
+            Egyptian and Italian cottons, cut to collar, cuff and monogram of
+            your choosing.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 04 — Occasion
+          </span>
+
+          <h3>Wedding Suits</h3>
+
+          <p>
+            Groom, groomsmen and reception looks tailored around your date,
+            not off a shelf.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 05 — Refit
+          </span>
+
+          <h3>Alterations</h3>
+
+          <p>
+            Shoulders, waist, sleeve and hem work for garments that deserve a
+            second life.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="docket h-100">
+          <span class="docket-punch"></span>
+
+          <span class="docket-number">
+            Dept. 06 — Mobile
+          </span>
+
+          <h3>At Your Doorstep</h3>
+
+          <p>
+            A tailor and a fabric trunk, brought to your home or office across
+            Dubai.
+          </p>
+
+          <a href="#" class="docket-link">
+            Explore
+            <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+   <section id="process" class="process-section py-5">
+  <div class="container py-lg-5">
+
+    <!-- Section Heading -->
+    <div class="row mb-5">
+      <div class="col-12 col-lg-8">
+        <div class="section-eyebrow mb-3">
+          From First Measure to Final Press
+        </div>
+
+        <h2 class="process-title mb-3">
+          A five-stage fitting, kept honest.
+        </h2>
+
+        <p class="process-intro mb-0">
+          The same sequence for every commission — nothing rushed,
+          nothing skipped.
+        </p>
+      </div>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="process-tape">
+      <div class="process-line d-none d-lg-block"></div>
+
+      <div class="row g-0">
+
+        <div class="col-12 col-md-6 col-lg">
+          <article class="process-step h-100">
+            <span class="process-mark">00 IN</span>
+
+            <h3>Consultation</h3>
+
+            <p>
+              We talk through occasion, wardrobe gaps and the silhouette you
+              actually want.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <article class="process-step h-100">
+            <span class="process-mark">14 IN</span>
+
+            <h3>Cloth &amp; Measure</h3>
+
+            <p>
+              Fabric selected from the book on file; every measurement logged
+              to a personal chart.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <article class="process-step h-100">
+            <span class="process-mark">28 IN</span>
+
+            <h3>Cut &amp; Baste</h3>
+
+            <p>
+              Pattern drafted and cloth cut, then hand-basted for the first
+              fitting.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <article class="process-step h-100">
+            <span class="process-mark">36 IN</span>
+
+            <h3>Fitting</h3>
+
+            <p>
+              Shoulders, drape and break are checked and adjusted on the body,
+              not the mannequin.
+            </p>
+          </article>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg">
+          <article class="process-step h-100">
+            <span class="process-mark">42 IN</span>
+
+            <h3>Final Press</h3>
+
+            <p>
+              Finished, pressed and delivered — with the pattern kept on file
+              for next time.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   <section id="fabrics" class="fabrics-section py-5">
+  <div class="container py-lg-5">
+
+    <div class="row mb-5">
+      <div class="col-12 col-lg-7">
+
+        <div class="section-eyebrow mb-3">
+          The Cloth Book
+        </div>
+
+        <h2 class="fabrics-title mb-3">
+          Mills we cut from.
+        </h2>
+
+        <p class="fabrics-intro mb-0">
+          Wool, silk and linen sourced from the houses that supply
+          Savile Row itself.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid px-0">
+    <div class="row g-0 fabric-strip">
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-one h-100">
+          <span>Loro Piana</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-two h-100">
+          <span>Scabal</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-three h-100">
+          <span>Holland &amp; Sherry</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-four h-100">
+          <span>Dormeuil</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-five h-100">
+          <span>Ariston Napoli</span>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="fabric-swatch swatch-six h-100">
+          <span>Ermenegildo Zegna</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <section id="coverage" class="coverage-section py-5">
+  <div class="container py-lg-5">
+    <div class="row align-items-center g-5">
+
+      <!-- Left Content -->
+      <div class="col-12 col-lg-5">
+
+        <div class="section-eyebrow mb-3">
+          Tailor at Your Doorstep
+        </div>
+
+        <h2 class="coverage-title mb-3">
+          We bring the fitting room to you.
+        </h2>
+
+        <p class="coverage-description mb-4">
+          A stylist and a trunk of fabric arrive at your home or office,
+          anywhere across these districts — full consultation, measurements
+          and fabric presentation included.
+        </p>
+
+        <div class="row g-0 coverage-list">
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Dubai Marina
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              JBR
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              JLT
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Palm Jumeirah
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Emirates Hills
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Downtown Dubai
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Business Bay
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="coverage-item">
+              Dubai Hills
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Artwork -->
+      <div class="col-12 col-lg-7">
+        <div class="coverage-art">
+
+          <svg
+            viewBox="0 0 400 300"
+            preserveAspectRatio="xMidYMid slice"
+            aria-label="Dubai doorstep tailoring coverage illustration"
+          >
+            <g
+              stroke="#C79A5E"
+              stroke-width="1"
+              opacity="0.55"
+              fill="none"
+            >
+              <path d="M20 250 Q100 180 160 220 T260 200 T380 150" />
+
+              <path
+                d="M20 250 Q100 180 160 220 T260 200 T380 150"
+                transform="translate(0,20)"
+                opacity="0.5"
+              />
+
+              <path
+                d="M20 250 Q100 180 160 220 T260 200 T380 150"
+                transform="translate(0,-25)"
+                opacity="0.35"
+              />
+            </g>
+
+            <g fill="#C79A5E">
+              <circle cx="160" cy="220" r="3.5" />
+              <circle cx="260" cy="200" r="3.5" />
+              <circle cx="80" cy="235" r="3.5" />
+              <circle cx="330" cy="165" r="3.5" />
+            </g>
+
+            <g
+              stroke="#3a4038"
+              stroke-width="1"
+              opacity="0.5"
+              fill="none"
+            >
+              <rect x="150" y="70" width="10" height="150" />
+              <rect x="168" y="40" width="10" height="180" />
+              <rect x="186" y="90" width="10" height="130" />
+              <rect x="204" y="55" width="10" height="165" />
+              <rect x="222" y="100" width="10" height="120" />
+            </g>
+          </svg>
+
+          <div class="coverage-art-label">
+            Dubai Mobile Fitting Service
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- =====================================================
+     CLIENT QUOTE
+===================================================== -->
+<section class="quote-band py-5">
+  <div class="container py-lg-5 text-center">
+
+    <blockquote class="mb-0">
+      “Three fittings in and the jacket already sat better than anything
+      I’d bought off a rack in a decade.”
+    </blockquote>
+
+    <cite>
+      — A Marina Client, Bespoke Two-Piece
+    </cite>
+
+  </div>
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+<section class="cta-band py-5">
+  <div class="container py-lg-4">
+
+    <div class="row align-items-center g-4">
+
+      <div class="col-12 col-lg-7">
+
+        <div class="section-eyebrow mb-3">
+          Marina Diamond 1, Dubai Marina
+        </div>
+
+        <h2 class="cta-title mb-0">
+          Ready to be measured properly?
+        </h2>
+
+      </div>
+
+      <div class="col-12 col-lg-5">
+
+        <div class="d-flex flex-column flex-sm-row justify-content-lg-end gap-3">
+
+          <a
+            href="#contact"
+            class="btn btn-solid-gold rounded-0 px-4 py-3"
+          >
+            Book a Free Consultation
+          </a>
+
+          <a
+            href="https://wa.me/971554997163"
+            class="btn btn-outline-gold rounded-0 px-4 py-3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-whatsapp me-2"></i>
+            WhatsApp +971 50 1139891
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
     <!-- ======================================================
          FOOTER
     ======================================================= -->
     <footer class="site-footer" id="contact">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row g-5">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row g-5">
+            <!-- Brand Column -->
+            <div class="col-12 col-lg-4">
+              <a
+                href="#home"
+                class="footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-4"
+              >
+                <img
+                  src="/assets/img/cropped-royal.png"
+                  alt="Royal Ascot Windsor Logo"
+                  class="footer-logo"
+                />
 
-                    <!-- Brand Column -->
-                    <div class="col-12 col-lg-4">
-                        <a
-                            href="#home"
-                            class="footer-brand d-inline-flex align-items-center gap-3 text-decoration-none mb-4"
-                        >
-                            <img
-                                src="/assets/img/cropped-royal.png"
-                                alt="Royal Ascot Windsor Logo"
-                                class="footer-logo"
-                            >
+                <span class="footer-logo-text font-serif">
+                  Royal Ascot Windsor
 
-                            <span class="footer-logo-text font-serif">
-                                Royal Ascot Windsor
+                  <small class="d-block font-sans"> Men's Tailoring </small>
+                </span>
+              </a>
 
-                                <small class="d-block font-sans">
-                                    Men's Tailoring
-                                </small>
-                            </span>
-                        </a>
+              <p class="footer-description">
+                Bespoke and made-to-measure tailoring for gentlemen who value
+                exceptional fit, timeless style and uncompromising attention to
+                detail.
+              </p>
 
-                        <p class="footer-description">
-                            Bespoke and made-to-measure tailoring for gentlemen
-                            who value exceptional fit, timeless style and
-                            uncompromising attention to detail.
-                        </p>
+              <div class="footer-social-links">
+                <a href="#" aria-label="Instagram" title="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
 
-                        <div class="footer-social-links">
-                            <a
-                                href="#"
-                                aria-label="Instagram"
-                                title="Instagram"
-                            >
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                <a href="#" aria-label="Facebook" title="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
 
-                            <a
-                                href="#"
-                                aria-label="Facebook"
-                                title="Facebook"
-                            >
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-
-                            <a
-                                href="https://wa.me/yournumber"
-                                aria-label="WhatsApp"
-                                title="WhatsApp"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <h3 class="footer-heading font-serif">
-                            Quick Links
-                        </h3>
-
-                        <ul class="footer-links list-unstyled mb-0">
-                            <li>
-                                <a href="#home">Home</a>
-                            </li>
-
-                            <li>
-                                <a href="#about">About Us</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">Services</a>
-                            </li>
-
-                            <li>
-                                <a href="#fabrics">Fabrics</a>
-                            </li>
-
-                            <li>
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Services -->
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <h3 class="footer-heading font-serif">
-                            Our Services
-                        </h3>
-
-                        <ul class="footer-links list-unstyled mb-0">
-                            <li>
-                                <a href="#services">Bespoke Suits</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">Made-to-Measure Shirts</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">Wedding Suits</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">Tuxedos</a>
-                            </li>
-
-                            <li>
-                                <a href="#services">Alterations</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact Details -->
-                    <div class="col-12 col-md-4 col-lg-3">
-                        <h3 class="footer-heading font-serif">
-                            Visit Our Atelier
-                        </h3>
-
-                        <ul class="footer-contact list-unstyled mb-0">
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-
-                                <span>
-                                    Marina Diamond 1,
-                                    <br>
-                                    Dubai Marina, Dubai
-                                </span>
-                            </li>
-
-                            <li>
-                                <i class="fas fa-phone"></i>
-
-                                <a href="tel:+971000000000">
-                                    +971 00 000 0000
-                                </a>
-                            </li>
-
-                            <li>
-                                <i class="fas fa-envelope"></i>
-
-                                <a href="mailto:info@royalascotwindsor.com">
-                                    info@royalascotwindsor.com
-                                </a>
-                            </li>
-
-                            <li>
-                                <i class="far fa-clock"></i>
-
-                                <span>
-                                    Monday–Saturday
-                                    <br>
-                                    10:00 AM–8:00 PM
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- Footer Appointment CTA -->
-                <div class="footer-cta">
-                    <div>
-                        <span class="footer-cta-small">
-                            Your perfect fit begins here
-                        </span>
-
-                        <h2 class="font-serif mb-0">
-                            Experience Bespoke Tailoring
-                        </h2>
-                    </div>
-
-                    <a
-                        href="#book"
-                        class="btn btn-solid-gold rounded-0 px-4 py-3 tracking"
-                    >
-                        Book an Appointment
-                    </a>
-                </div>
-
+                <a
+                  href="https://wa.me/yournumber"
+                  aria-label="WhatsApp"
+                  title="WhatsApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
             </div>
-        </div>
 
-        <!-- Bottom Footer -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-wrapper">
-                    <p class="mb-0">
-                        © <span id="year"></span>
-                        Royal Ascot Windsor Men's Tailoring. All rights reserved.
-                    </p>
+            <!-- Quick Links -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <h3 class="footer-heading font-serif">Quick Links</h3>
 
-                    <div class="footer-policy-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms &amp; Conditions</a>
-                    </div>
-                </div>
+              <ul class="footer-links list-unstyled mb-0">
+                <li>
+                  <a href="#home">Home</a>
+                </li>
+
+                <li>
+                  <a href="#about">About Us</a>
+                </li>
+
+                <li>
+                  <a href="#services">Services</a>
+                </li>
+
+                <li>
+                  <a href="#fabrics">Fabrics</a>
+                </li>
+
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
             </div>
+
+            <!-- Services -->
+            <div class="col-6 col-md-4 col-lg-3">
+              <h3 class="footer-heading font-serif">Our Services</h3>
+
+              <ul class="footer-links list-unstyled mb-0">
+                <li>
+                  <a href="#services">Bespoke Suits</a>
+                </li>
+
+                <li>
+                  <a href="#services">Made-to-Measure Shirts</a>
+                </li>
+
+                <li>
+                  <a href="#services">Wedding Suits</a>
+                </li>
+
+                <li>
+                  <a href="#services">Tuxedos</a>
+                </li>
+
+                <li>
+                  <a href="#services">Alterations</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="col-12 col-md-4 col-lg-3">
+              <h3 class="footer-heading font-serif">Visit Our Atelier</h3>
+
+              <ul class="footer-contact list-unstyled mb-0">
+                <li>
+                  <i class="fas fa-map-marker-alt"></i>
+
+                  <span>
+                    Marina Diamond 1,
+                    <br />
+                    Dubai Marina, Dubai
+                  </span>
+                </li>
+
+                <li>
+                  <i class="fas fa-phone"></i>
+
+                  <a href="tel:+971 50 113 9891"> +971 50 113 9891 </a>
+                </li>
+
+                <li class="d-block">
+                  <i class="fas fa-envelope"></i>
+
+                  <a href="mailto: royalascotwindsor@gmail.com">
+                     royalascotwindsor@gmail.com
+                  </a>
+                  <a href="mailto:Info@royalascot.ae">
+                     Info@royalascot.ae
+                  </a>
+                </li>
+
+                <li>
+                  <i class="far fa-clock"></i>
+
+                  <span>
+                    Monday–Saturday
+                    <br />
+                    10:00 AM–8:00 PM
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Footer Appointment CTA -->
+          <div class="footer-cta">
+            <div>
+              <span class="footer-cta-small">
+                Your perfect fit begins here
+              </span>
+
+              <h2 class="font-serif mb-0">Experience Bespoke Tailoring</h2>
+            </div>
+
+            <a
+              href="#book"
+              class="btn btn-solid-gold rounded-0 px-4 py-3 tracking"
+            >
+              Book an Appointment
+            </a>
+          </div>
         </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-wrapper">
+            <p class="mb-0">
+              © <span id="year"></span>
+              Royal Ascot Windsor Men's Tailoring. All rights reserved.
+            </p>
+
+            <div class="footer-policy-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
     <a
-        href="https://wa.me/yournumber"
-        class="floating-whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Contact Royal Ascot Windsor on WhatsApp"
+      href="https://wa.me/yournumber"
+      class="floating-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contact Royal Ascot Windsor on WhatsApp"
     >
-        <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-whatsapp"></i>
     </a>
 
-   <!-- Bootstrap JavaScript -->
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- AOS JavaScript -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
         if (typeof AOS !== "undefined") {
-            AOS.init({
-                once: true,
-                duration: 900
-            });
+          AOS.init({
+            once: true,
+            duration: 900,
+          });
         }
 
         const yearElement = document.getElementById("year");
         if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
+          yearElement.textContent = new Date().getFullYear();
         }
 
         const header = document.getElementById("mainHeader");
         if (!header) return;
 
         function updateNavbar() {
-            if (window.scrollY > 40) {
-                header.classList.add("nav-scrolled");
-            } else {
-                header.classList.remove("nav-scrolled");
-            }
+          if (window.scrollY > 40) {
+            header.classList.add("nav-scrolled");
+          } else {
+            header.classList.remove("nav-scrolled");
+          }
         }
 
         updateNavbar();
         window.addEventListener("scroll", updateNavbar, { passive: true });
-    });
-</script>
-
-</body>
+      });
+    </script>
+  </body>
 </html>

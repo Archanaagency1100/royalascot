@@ -9,6 +9,10 @@
     --dark-light: #122520;
     --white: #ffffff;
     --text-muted: #9ca7a3;
+    --paper: #eee6d8;
+    /* --paper: #EDE8DF; */
+    --line: rgba(247, 245, 240, 0.14);
+    --line-dark: rgba(27, 29, 30, 0.14);
     --border-color: rgba(179, 142, 89, 0.25);
     --transition: all 0.35s ease;
 }
@@ -22,10 +26,12 @@ html {
 }
 
 body {
+
     margin: 0;
     overflow-x: hidden;
-    background-color: var(--dark-bg) !important;
-    color: var(--white);
+    background-color: var(--paper) !important;
+    /* background-color: var(--dark-bg) !important; */
+    color: var(--dark-bg);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -43,6 +49,8 @@ img {
 
 a {
     transition: var(--transition);
+    color: inherit;
+    text-decoration: none;
 }
 
 .font-serif {
@@ -101,6 +109,7 @@ a {
 .main-header.nav-scrolled .logo-img {
     width: 50px;
 }
+
 .logo-text {
     color: var(--gold);
     font-size: 1.05rem;
@@ -124,7 +133,7 @@ a {
     padding: 10px 0;
 }
 
-.desktop-navigation > ul > li > a::after {
+.desktop-navigation>ul>li>a::after {
     position: absolute;
     right: 0;
     bottom: 2px;
@@ -137,7 +146,7 @@ a {
     transition: width 0.3s ease;
 }
 
-.desktop-navigation > ul > li > a:hover::after {
+.desktop-navigation>ul>li>a:hover::after {
     width: 100%;
 }
 
@@ -274,12 +283,9 @@ a {
     width: min(390px, 88vw) !important;
     color: var(--white);
     background:
-        linear-gradient(
-            rgba(9, 22, 19, 0.97),
-            rgba(9, 22, 19, 0.97)
-        ),
-        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
-        center / cover no-repeat;
+        linear-gradient(rgba(9, 22, 19, 0.97),
+            rgba(9, 22, 19, 0.97)),
+        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png") center / cover no-repeat;
     border-left: 1px solid var(--border-color);
 }
 
@@ -321,7 +327,7 @@ a {
     padding: 16px 24px 28px;
 }
 
-.mobile-navigation > ul > li {
+.mobile-navigation>ul>li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -445,12 +451,10 @@ a {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: linear-gradient(
-        to right,
-        rgba(9, 22, 19, 0.98) 40%,
-        rgba(9, 22, 19, 0.75) 65%,
-        rgba(9, 22, 19, 0.1) 100%
-    );
+    background: linear-gradient(to right,
+            rgba(9, 22, 19, 0.98) 40%,
+            rgba(9, 22, 19, 0.75) 65%,
+            rgba(9, 22, 19, 0.1) 100%);
 }
 
 .hero-container {
@@ -508,15 +512,15 @@ a {
     border-color: rgba(255, 255, 255, 0.18) !important;
 }
 
-.hero-features > div {
+.hero-features>div {
     font-size: 0.7rem;
 }
 
-.hero-footer-content > p:first-child {
+.hero-footer-content>p:first-child {
     font-size: 1.15rem;
 }
 
-.hero-footer-content > p:last-child {
+.hero-footer-content>p:last-child {
     max-width: 750px;
     line-height: 1.7;
 }
@@ -526,10 +530,1278 @@ a {
     z-index: 0;
     min-height: 100vh;
     background:
-        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
-        no-repeat center center;
+        url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png") no-repeat center center;
     background-size: cover;
 }
+
+/* ---other sections- */
+
+
+
+
+/* =====================================================
+   BESPOKE INTRO SECTION
+===================================================== */
+
+.bespoke-intro {
+    overflow: hidden;
+    color: var(--white);
+    background-color: var(--dark-bg);
+}
+
+.bespoke-copy {
+    width: 100%;
+}
+
+
+
+
+.section-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+    width: 25px;
+    height: 1px;
+    content: "";
+    background-color: var(--gold);
+}
+
+
+/* Main heading */
+
+.bespoke-title {
+    max-width: 700px;
+    color: var(--white);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.bespoke-title em {
+    display: inline;
+    color: var(--gold-hover);
+    font-weight: 400;
+}
+
+
+/* Description */
+
+.bespoke-description {
+    max-width: 610px;
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+
+/* Buttons */
+
+.btn-gold {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.btn-gold:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold-hover);
+    border-color: var(--gold-hover);
+}
+
+.btn-outline-gold {
+    color: var(--gold);
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.btn-outline-gold:hover {
+    color: var(--dark-bg);
+    background-color: var(--gold);
+    border-color: var(--gold);
+}
+
+
+/* Statistics */
+
+.bespoke-stats {
+    max-width: 700px;
+    border-top: 1px solid var(--line);
+}
+
+.bespoke-stats strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.bespoke-stats span {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   PATTERN ILLUSTRATION
+===================================================== */
+
+.pattern-art {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+    border-left: 1px solid var(--line);
+    background-color: var(--dark-secondary);
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 39px,
+            var(--line) 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 39px,
+            var(--line) 40px
+        );
+}
+
+.pattern-art svg {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+}
+
+.pattern-label {
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    z-index: 2;
+    color: var(--gold-hover);
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+}
+
+.pattern-note {
+    position: absolute;
+    right: 8%;
+    bottom: 8%;
+    z-index: 2;
+    max-width: 190px;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.6rem;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FABRIC MARQUEE
+===================================================== */
+
+.fabric-marquee {
+    overflow: hidden;
+    padding: 17px 0;
+    color: var(--gold-hover);
+    background-color: var(--dark-light);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+}
+
+.fabric-track {
+    display: inline-flex;
+    width: max-content;
+    animation: fabricScroll 35s linear infinite;
+}
+
+.fabric-track span {
+    display: inline-block;
+    margin: 0 30px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+@keyframes fabricScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+    .bespoke-copy {
+        padding-bottom: 45px;
+    }
+
+    .bespoke-title {
+        max-width: 800px;
+    }
+
+    .pattern-art {
+        min-height: 470px;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+    }
+
+    .pattern-art svg {
+        min-height: 470px;
+    }
+
+    .pattern-label,
+    .pattern-note {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+    .bespoke-intro {
+        padding-top: 45px !important;
+        padding-bottom: 45px !important;
+    }
+
+    .section-eyebrow {
+        font-size: 0.6rem;
+        line-height: 1.6;
+    }
+
+    .bespoke-title {
+        font-size: clamp(2.5rem, 12vw, 3.6rem);
+    }
+
+    .bespoke-description {
+        font-size: 0.9rem;
+    }
+
+    .bespoke-stats strong {
+        font-size: 0.9rem;
+    }
+
+    .bespoke-stats span {
+        font-size: 0.6rem;
+    }
+
+    .pattern-art {
+        min-height: 390px;
+    }
+
+    .pattern-art svg {
+        min-height: 390px;
+    }
+
+    .fabric-track span {
+        margin: 0 22px;
+        font-size: 0.64rem;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+    .bespoke-title {
+        font-size: 2.55rem;
+    }
+
+    .btn-gold,
+    .btn-outline-gold {
+        width: 100%;
+    }
+
+    .pattern-art {
+        min-height: 330px;
+    }
+
+    .pattern-art svg {
+        min-height: 330px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .fabric-track {
+        animation: none;
+    }
+}
+
+
+/* -----services----------- */
+
+/* =====================================================
+   FABRIC MARQUEE
+===================================================== */
+
+.fabric-marquee {
+  overflow: hidden;
+  padding: 16px 0;
+  color: var(--gold-hover);
+  background-color: var(--dark-light);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.fabric-track {
+  display: inline-flex;
+  width: max-content;
+  animation: fabricScroll 34s linear infinite;
+}
+
+.fabric-track span {
+  margin: 0 28px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+@keyframes fabricScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =====================================================
+   SERVICES SECTION
+===================================================== */
+
+.services-section {
+  color: #1b1d1e;
+  background-color: var(--paper);
+}
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+  width: 24px;
+  height: 1px;
+  content: "";
+  background-color: var(--gold);
+}
+
+.services-title {
+  max-width: 650px;
+  color: #1b1d1e;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.services-intro {
+  max-width: 600px;
+  color: #5c5c54;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   SERVICE CARDS
+===================================================== */
+
+.services-grid {
+  overflow: hidden;
+  border-top: 1px solid var(--line-dark);
+  border-left: 1px solid var(--line-dark);
+}
+
+.services-grid > div {
+  border-right: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.docket {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 38px 30px;
+  background-color: var(--paper);
+  transition: var(--transition);
+}
+
+.docket:hover {
+  background-color: #e5dfd4;
+}
+
+.docket-punch {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+}
+
+.docket-number {
+  padding-right: 30px;
+  color: var(--gold);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.docket h3 {
+  margin: 18px 0 10px;
+  color: #1b1d1e;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.docket p {
+  max-width: 36ch;
+  margin-bottom: 24px;
+  color: #5c5c54;
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.docket-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.docket-link span {
+  transition: transform 0.3s ease;
+}
+
+.docket-link:hover {
+  color: var(--gold-hover);
+}
+
+.docket-link:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .docket {
+    min-height: 280px;
+    padding: 34px 26px;
+  }
+
+  .services-title {
+    max-width: 700px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+  .services-section {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .services-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .services-intro {
+    font-size: 0.92rem;
+  }
+
+  .docket {
+    min-height: auto;
+    padding: 32px 24px;
+  }
+
+  .docket h3 {
+    font-size: 1.55rem;
+  }
+
+  .fabric-track span {
+    margin: 0 22px;
+    font-size: 0.65rem;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .fabric-track {
+    animation: none;
+  }
+}
+
+
+
+/* =====================================================
+   PROCESS SECTION
+===================================================== */
+
+.process-section {
+  color: var(--white);
+  background-color: var(--dark-secondary);
+}
+
+.process-title {
+  max-width: 760px;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.process-intro {
+  max-width: 620px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* Eyebrow */
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+  width: 24px;
+  height: 1px;
+  content: "";
+  background-color: var(--gold);
+}
+
+
+/* =====================================================
+   TAPE LAYOUT
+===================================================== */
+
+.process-tape {
+  position: relative;
+  padding-top: 12px;
+}
+
+.process-line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--line);
+}
+
+.process-step {
+  position: relative;
+  min-height: 250px;
+  padding: 30px 24px 25px;
+  border-left: 1px solid var(--line);
+}
+
+.process-step::before {
+  position: absolute;
+  top: -5px;
+  left: -1px;
+  width: 1px;
+  height: 10px;
+  content: "";
+  background-color: var(--gold);
+}
+
+.process-step::after {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 5px;
+  height: 5px;
+  content: "";
+  background-color: var(--gold);
+  border-radius: 50%;
+}
+
+.process-tape .row > div:first-child .process-step {
+  border-left: 0;
+}
+
+.process-tape .row > div:first-child .process-step::before,
+.process-tape .row > div:first-child .process-step::after {
+  left: 0;
+}
+
+
+/* Process Content */
+
+.process-mark {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.process-step h3 {
+  margin-bottom: 10px;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.process-step p {
+  max-width: 32ch;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .process-tape {
+    padding-top: 0;
+  }
+
+  .process-tape .row {
+    row-gap: 24px;
+  }
+
+  .process-step {
+    min-height: 230px;
+    padding: 28px 24px;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+
+  .process-step::before {
+    top: -1px;
+    left: 24px;
+    width: 18px;
+    height: 1px;
+  }
+
+  .process-step::after {
+    top: -3px;
+    left: 22px;
+  }
+
+  .process-tape .row > div:first-child .process-step {
+    border-left: 1px solid var(--line);
+  }
+
+  .process-tape .row > div:first-child .process-step::before {
+    left: 24px;
+  }
+
+  .process-tape .row > div:first-child .process-step::after {
+    left: 22px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+  .process-section {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .process-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .process-intro {
+    font-size: 0.92rem;
+  }
+
+  .process-tape .row {
+    row-gap: 16px;
+  }
+
+  .process-step {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
+  .process-step h3 {
+    font-size: 1.5rem;
+  }
+
+  .process-step p {
+    max-width: 100%;
+  }
+}
+/* =====================================================
+   FABRICS SECTION
+===================================================== */
+
+.fabrics-section {
+  color: var(--dark-bg);
+  background-color: var(--paper);
+}
+
+.fabrics-title {
+  max-width: 650px;
+  /* color: var(--white); */
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.fabrics-intro {
+  max-width: 620px;
+  /* color: var(--text-muted); */
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FABRIC SWATCHES
+===================================================== */
+
+.fabric-strip {
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.fabric-strip > div {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.fabric-swatch {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 18px;
+}
+
+.fabric-swatch::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.95;
+  transition: transform 0.45s ease;
+}
+
+.fabric-swatch::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    transparent 60%
+  );
+}
+
+.fabric-swatch:hover::before {
+  transform: scale(1.05);
+}
+
+.fabric-swatch span {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* Fabric Patterns */
+
+.swatch-one::before {
+  background:
+    repeating-linear-gradient(
+      115deg,
+      #2b2f2a,
+      #2b2f2a 6px,
+      #33372f 6px,
+      #33372f 12px
+    );
+}
+
+.swatch-two::before {
+  background:
+    repeating-linear-gradient(
+      70deg,
+      #3a2f2a,
+      #3a2f2a 5px,
+      #4a3c33 5px,
+      #4a3c33 10px
+    );
+}
+
+.swatch-three::before {
+  background:
+    repeating-linear-gradient(
+      100deg,
+      #2a2e33,
+      #2a2e33 7px,
+      #33383f 7px,
+      #33383f 14px
+    );
+}
+
+.swatch-four::before {
+  background:
+    repeating-linear-gradient(
+      60deg,
+      #4a3327,
+      #4a3327 4px,
+      #5a4030 4px,
+      #5a4030 9px
+    );
+}
+
+.swatch-five::before {
+  background:
+    repeating-linear-gradient(
+      120deg,
+      #22221f,
+      #22221f 8px,
+      #2c2b26 8px,
+      #2c2b26 16px
+    );
+}
+
+.swatch-six::before {
+  background:
+    repeating-linear-gradient(
+      80deg,
+      #33302a,
+      #33302a 5px,
+      #403c33 5px,
+      #403c33 11px
+    );
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .fabric-swatch {
+    min-height: 220px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+  .fabrics-section {
+    padding-top: 55px !important;
+  }
+
+  .fabrics-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .fabrics-intro {
+    font-size: 0.92rem;
+  }
+
+  .fabric-swatch {
+    min-height: 190px;
+    padding: 15px;
+  }
+
+  .fabric-swatch span {
+    font-size: 0.6rem;
+    line-height: 1.5;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .fabric-swatch {
+    min-height: 165px;
+  }
+}
+
+/* =====================================================
+   COVERAGE SECTION
+===================================================== */
+
+.coverage-section {
+  color: #1b1d1e;
+  background-color: var(--paper);
+}
+
+.coverage-title {
+  max-width: 550px;
+  color: #1b1d1e;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 4.5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.coverage-description {
+  max-width: 520px;
+  color: #4b4b45;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   COVERAGE LOCATIONS
+===================================================== */
+
+.coverage-list {
+  max-width: 560px;
+  border-top: 1px solid var(--line-dark);
+}
+
+.coverage-list > div:nth-child(odd) {
+  padding-right: 18px;
+}
+
+.coverage-list > div:nth-child(even) {
+  padding-left: 18px;
+}
+
+.coverage-item {
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  color: #353630;
+  border-bottom: 1px solid var(--line-dark);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.coverage-item::before {
+  content: "—";
+  color: var(--gold);
+}
+
+
+/* =====================================================
+   COVERAGE ARTWORK
+===================================================== */
+
+.coverage-art {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background-color: var(--dark-secondary);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      var(--line) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      var(--line) 40px
+    );
+  border: 1px solid var(--line-dark);
+}
+
+.coverage-art svg {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+}
+
+.coverage-art-label {
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  color: var(--gold-hover);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+  .coverage-art {
+    min-height: 430px;
+  }
+
+  .coverage-art svg {
+    min-height: 430px;
+  }
+
+  .coverage-title {
+    max-width: 700px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+  .coverage-section {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .coverage-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .coverage-description {
+    font-size: 0.92rem;
+  }
+
+  .coverage-list > div:nth-child(odd) {
+    padding-right: 10px;
+  }
+
+  .coverage-list > div:nth-child(even) {
+    padding-left: 10px;
+  }
+
+  .coverage-item {
+    min-height: 54px;
+    font-size: 0.75rem;
+  }
+
+  .coverage-art {
+    min-height: 360px;
+  }
+
+  .coverage-art svg {
+    min-height: 360px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .coverage-list > div {
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .coverage-art {
+    min-height: 310px;
+  }
+
+  .coverage-art svg {
+    min-height: 310px;
+  }
+
+  .coverage-art-label {
+    right: 15px;
+    bottom: 14px;
+    font-size: 0.55rem;
+  }
+}
+
+/* =====================================================
+   CLIENT QUOTE
+===================================================== */
+
+.quote-band {
+  color: var(--white);
+  background-color: #351b1d;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.quote-band blockquote {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.quote-band cite {
+  display: block;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.cta-band {
+  color: var(--white);
+  background-color: var(--dark-secondary);
+}
+
+.cta-title {
+  max-width: 650px;
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.7rem, 4.5vw, 4.4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+  .quote-band {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .quote-band blockquote {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
+
+  .quote-band cite {
+    margin-top: 22px;
+    font-size: 0.62rem;
+    line-height: 1.7;
+  }
+
+  .cta-band {
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
+  }
+
+  .cta-title {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .cta-band .btn {
+    width: 100%;
+  }
+}
+
+
 
 
 /* ======================================================
@@ -548,12 +1820,10 @@ a {
     width: 100%;
     height: 1px;
     content: "";
-    background: linear-gradient(
-        to right,
-        transparent,
-        var(--gold),
-        transparent
-    );
+    background: linear-gradient(to right,
+            transparent,
+            var(--gold),
+            transparent);
 }
 
 .footer-top {
@@ -568,11 +1838,9 @@ a {
     width: 380px;
     height: 380px;
     content: "";
-    background: radial-gradient(
-        circle,
-        rgba(179, 142, 89, 0.08),
-        transparent 68%
-    );
+    background: radial-gradient(circle,
+            rgba(179, 142, 89, 0.08),
+            transparent 68%);
     pointer-events: none;
 }
 
@@ -884,23 +2152,18 @@ a {
 
     .hero-overlay {
         z-index: 1;
-        background: linear-gradient(
-            to bottom,
-            rgba(9, 22, 19, 0.95) 0%,
-            rgba(9, 22, 19, 0.89) 56%,
-            rgba(9, 22, 19, 0.35) 100%
-        );
+        background: linear-gradient(to bottom,
+                rgba(9, 22, 19, 0.95) 0%,
+                rgba(9, 22, 19, 0.89) 56%,
+                rgba(9, 22, 19, 0.35) 100%);
     }
 
     .hero-container {
         position: relative;
         background:
-            linear-gradient(
-                rgba(9, 22, 19, 0.64),
-                rgba(9, 22, 19, 0.88)
-            ),
-            url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png")
-            center top / cover no-repeat;
+            linear-gradient(rgba(9, 22, 19, 0.64),
+                rgba(9, 22, 19, 0.88)),
+            url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png") center top / cover no-repeat;
     }
 
     .hero-content-column {
@@ -1013,16 +2276,16 @@ a {
         gap: 14px !important;
     }
 
-    .hero-features > div {
+    .hero-features>div {
         font-size: 0.68rem;
     }
 
-    .hero-footer-content > p:first-child {
+    .hero-footer-content>p:first-child {
         font-size: 1rem;
         line-height: 1.4;
     }
 
-    .hero-footer-content > p:last-child {
+    .hero-footer-content>p:last-child {
         font-size: 0.73rem;
     }
 
@@ -1169,15 +2432,15 @@ a {
     .mobile-offcanvas .offcanvas-body {
         padding-right: 18px;
         padding-left: 18px;
-   
+
     }
 }
 
 .offcanvas-body {
-       
-        /* position: absolute; */
-        z-index: 9999;
-    }
+
+    /* position: absolute; */
+    z-index: 9999;
+}
 
 /* ======================================================
    REDUCED MOTION ACCESSIBILITY
