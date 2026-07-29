@@ -1,0 +1,121 @@
+<header id="mainHeader" class="main-header">
+  <div class="container-fluid header-container">
+    <div class="d-flex justify-content-between align-items-center">
+      <a href="index.html" class="brand-wrapper d-flex align-items-center gap-3 text-decoration-none">
+        <img src="assets/img/cropped-royal.png" alt="Royal Ascot Windsor Logo" class="logo-img img-fluid" />
+
+        <span class="logo-text font-serif">
+          Royal Ascot Windsor
+          <small class="d-block text-white-50 font-sans">Men's Tailoring</small>
+        </span>
+      </a>
+
+      <nav class="desktop-navigation d-none d-xl-block" aria-label="Main navigation">
+        <ul class="d-flex align-items-center list-unstyled gap-4 mb-0 font-sans tracking">
+          <li>
+            <a href="index.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="home">HOME</a>
+          </li>
+
+          <li class="nav-dropdown position-relative">
+            <a href="custom-suits.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="suits" aria-haspopup="true">
+              SUITS
+              <i class="fas fa-chevron-down ms-1"></i>
+            </a>
+
+            <ul class="services-dropdown list-unstyled mb-0">
+              <li><a href="custom-suits.html">Custom Suits</a></li>
+              <li><a href="wedding-suits.html">Wedding Suits</a></li>
+              <li><a href="bespoke-suits.html">Bespoke Suits</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="shirts.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="shirts">SHIRTS</a>
+          </li>
+
+          <li>
+            <a href="fabrics.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="fabrics">FABRICS</a>
+          </li>
+
+          <li>
+            <a href="alterations.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="alterations">ALTERATIONS</a>
+          </li>
+
+          <li>
+            <a href="gallery.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="gallery">GALLERY</a>
+          </li>
+
+          <li>
+            <a href="blog.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="blog">BLOG</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="text-white-50 text-decoration-none small hover-gold" data-nav-link="contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="d-none d-xl-block">
+        <a href="contact.html" class="btn btn-outline-gold rounded-0 small tracking">Book Appointment</a>
+      </div>
+
+      <button
+        class="mobile-menu-button d-flex d-xl-none align-items-center justify-content-center"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu"
+        aria-label="Open navigation menu"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-end mobile-offcanvas" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <div class="d-flex align-items-center gap-3">
+      <img src="assets/img/cropped-royal.png" alt="Royal Ascot Windsor Logo" class="mobile-menu-logo" />
+
+      <div>
+        <h5 class="offcanvas-title font-serif text-gold mb-0" id="mobileMenuLabel">Royal Ascot Windsor</h5>
+        <span class="mobile-brand-subtitle">Men's Tailoring</span>
+      </div>
+    </div>
+
+    <button type="button" class="mobile-close-button" data-bs-dismiss="offcanvas" aria-label="Close navigation menu">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column">
+    <nav class="mobile-navigation">
+      <ul class="list-unstyled mb-0">
+        <li><a href="index.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="home">Home</a></li>
+
+        <li class="nav-dropdown position-relative">
+          <button class="mobile-nav-link mobile-dropdown-button" type="button" data-bs-toggle="collapse" data-bs-target="#mobileServices" aria-expanded="false" aria-controls="mobileServices">
+            <span>Suits</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+
+          <div class="collapse" id="mobileServices">
+            <ul class="mobile-submenu list-unstyled">
+              <li><a href="custom-suits.html" data-bs-dismiss="offcanvas">Custom Suits</a></li>
+              <li><a href="wedding-suits.html" data-bs-dismiss="offcanvas">Wedding Suits</a></li>
+              <li><a href="bespoke-suits.html" data-bs-dismiss="offcanvas">Bespoke Suits</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li><a href="shirts.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="shirts">Shirts</a></li>
+        <li><a href="fabrics.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="fabrics">Fabrics</a></li>
+        <li><a href="alterations.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="alterations">Alterations</a></li>
+        <li><a href="gallery.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="gallery">Gallery</a></li>
+        <li><a href="blog.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="blog">Blog</a></li>
+        <li><a href="contact.html" class="mobile-nav-link" data-bs-dismiss="offcanvas" data-nav-link="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
