@@ -106,9 +106,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     const reviewsViewport = reviewsTrack.closest(".reviews-viewport");
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
     let isDragging = false;
     let dragStartX = 0;
     let dragStartScroll = 0;
@@ -133,10 +130,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (
         !isDragging &&
         time >= resumeAutoSlideAt &&
-        !reduceMotion &&
         !document.hidden
       ) {
-        reviewsViewport.scrollLeft += elapsed * 0.025;
+        reviewsViewport.scrollLeft += elapsed * 0.04;
         normalizeReviewScroll();
       }
 
