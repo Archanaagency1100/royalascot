@@ -1851,7 +1851,8 @@ a {
 .review-card {
   display: grid;
   width: min(620px, 72vw);
-  min-height: 270px;
+  height: 290px;
+  min-height: 0;
   overflow: hidden;
   grid-template-columns: 46% 54%;
   background: #191d1b;
@@ -1863,7 +1864,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 270px;
+  min-height: 0;
   overflow: hidden;
   background: #0d100f;
   isolation: isolate;
@@ -1884,7 +1885,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: inherit;
+  min-height: 0;
   object-fit: cover;
   object-position: 50% 32%;
   filter: saturate(0.76) contrast(1.04);
@@ -1914,6 +1915,7 @@ a {
   flex-direction: column;
   justify-content: center;
   padding: 30px 32px;
+  overflow: hidden;
 }
 
 .review-stars {
@@ -1923,12 +1925,16 @@ a {
 }
 
 .review-copy p {
+  display: -webkit-box;
+  overflow: hidden;
   margin: 17px 0 22px;
   color: rgba(255, 255, 255, 0.84);
   font-family: "Cormorant Garamond", serif;
   font-size: 1.28rem;
   font-style: italic;
   line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
 }
 
 .review-copy footer {
@@ -2028,14 +2034,19 @@ a {
 }
 
 .review-modal-main-image {
+  display: grid;
   min-height: 0;
   overflow: hidden;
+  place-items: center;
+  background: #090c0b;
 }
 
 .review-modal-main-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  max-height: 500px;
+  object-fit: contain;
+  object-position: center;
 }
 
 .review-modal-thumbnails {
@@ -2175,13 +2186,14 @@ a {
 
   .review-card {
     width: min(520px, 84vw);
-    min-height: 230px;
+    height: 250px;
+    min-height: 0;
     grid-template-columns: 43% 57%;
   }
 
   .review-image {
-    height: 230px;
-    min-height: 230px;
+    height: 250px;
+    min-height: 0;
   }
 
   .review-copy {
@@ -2191,6 +2203,7 @@ a {
   .review-copy p {
     margin: 13px 0 18px;
     font-size: 1.05rem;
+    -webkit-line-clamp: 4;
   }
 
   .review-copy footer {
@@ -2915,13 +2928,14 @@ a {
 
   .review-card {
     width: 82vw;
-    min-height: 0;
+    height: 420px;
+    min-height: 420px;
     grid-template-columns: 1fr;
   }
 
   .review-image {
     height: 180px;
-    min-height: 170px;
+    min-height: 180px;
     max-height: 180px;
   }
 
@@ -2936,7 +2950,8 @@ a {
   }
 
   .review-copy {
-    min-height: 210px;
+    height: 240px;
+    min-height: 240px;
   }
 
   .review-copy footer {

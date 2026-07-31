@@ -113,7 +113,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.querySelectorAll(".review-read-more:not([tabindex='-1'])").forEach((button) => {
       button.addEventListener("click", () => {
-        const images = button.dataset.reviewImages.split("|");
+        const images = button.dataset.reviewImages
+          .split("|")
+          .map((src) => src.trim())
+          .filter(Boolean);
         const name = button.dataset.reviewName;
 
         modalText.textContent = `“${button.dataset.reviewText}”`;
