@@ -100,6 +100,77 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
       reviewsTrack.appendChild(clone);
     });
+
+    reviewsTrack.querySelectorAll("img").forEach((image) => {
+      image.draggable = false;
+    });
+
+    const reviewsViewport = reviewsTrack.closest(".reviews-viewport");
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+    let lastFrameTime = performance.now();
+
+    const normalizeReviewScroll = () => {
+      const loopWidth = reviewsTrack.scrollWidth / 2;
+      if (!loopWidth) return;
+
+      if (reviewsViewport.scrollLeft >= loopWidth) {
+        reviewsViewport.scrollLeft -= loopWidth;
+      } else if (reviewsViewport.scrollLeft <= 0) {
+        reviewsViewport.scrollLeft += loopWidth;
+      }
+    };
+
+    const moveReviews = (time) => {
+      const elapsed = Math.min(time - lastFrameTime, 40);
+      lastFrameTime = time;
+
+      if (!isDragging && !reduceMotion && !document.hidden) {
+        reviewsViewport.scrollLeft += elapsed * 0.025;
+        normalizeReviewScroll();
+      }
+
+      window.requestAnimationFrame(moveReviews);
+    };
+
+    reviewsViewport.scrollLeft = 1;
+    window.requestAnimationFrame(moveReviews);
+
+    reviewsViewport.addEventListener("pointerdown", (event) => {
+      if (event.target.closest("button, a")) return;
+
+      isDragging = true;
+      dragStartX = event.clientX;
+      dragStartScroll = reviewsViewport.scrollLeft;
+      reviewsViewport.classList.add("is-dragging");
+      reviewsViewport.setPointerCapture(event.pointerId);
+    });
+
+    reviewsViewport.addEventListener("pointermove", (event) => {
+      if (!isDragging) return;
+      reviewsViewport.scrollLeft =
+        dragStartScroll - (event.clientX - dragStartX);
+      const scrollBeforeNormalize = reviewsViewport.scrollLeft;
+      normalizeReviewScroll();
+      dragStartScroll +=
+        reviewsViewport.scrollLeft - scrollBeforeNormalize;
+    });
+
+    const finishReviewDrag = (event) => {
+      if (!isDragging) return;
+      isDragging = false;
+      reviewsViewport.classList.remove("is-dragging");
+      if (reviewsViewport.hasPointerCapture(event.pointerId)) {
+        reviewsViewport.releasePointerCapture(event.pointerId);
+      }
+    };
+
+    reviewsViewport.addEventListener("pointerup", finishReviewDrag);
+    reviewsViewport.addEventListener("pointercancel", finishReviewDrag);
   }
 
   const reviewModalElement = document.getElementById("reviewModal");

@@ -1805,6 +1805,14 @@ a {
 
 .reviews-viewport {
   position: relative;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.reviews-viewport.is-dragging {
+  cursor: grabbing;
 }
 
 .reviews-viewport::before,
@@ -1833,19 +1841,6 @@ a {
   display: flex;
   gap: 22px;
   width: max-content;
-  animation: reviews-slide 42s linear infinite;
-  will-change: transform;
-}
-
-.reviews-viewport:hover .reviews-track,
-.reviews-viewport:focus-within .reviews-track {
-  animation-play-state: paused;
-}
-
-@keyframes reviews-slide {
-  to {
-    transform: translateX(calc(-50% - 11px));
-  }
 }
 
 .review-card {
@@ -1890,6 +1885,7 @@ a {
   object-position: 50% 32%;
   filter: saturate(0.76) contrast(1.04);
   transition: transform 0.7s ease, filter 0.7s ease;
+  -webkit-user-drag: none;
 }
 
 .review-card:nth-child(3n + 1) .review-image img {
@@ -2021,7 +2017,7 @@ a {
 .review-modal-layout {
   display: grid;
   min-height: 540px;
-  grid-template-columns: 52% 48%;
+  grid-template-columns: 40% 60%;
 }
 
 .review-modal-gallery {
@@ -2950,7 +2946,6 @@ a {
 
   .reviews-track {
     gap: 15px;
-    animation-duration: 34s;
   }
 
   .review-card {
@@ -3016,11 +3011,5 @@ a {
   .review-modal-copy blockquote {
     margin: 22px 0 26px;
     font-size: 1.45rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reviews-track {
-    animation: none;
   }
 }
