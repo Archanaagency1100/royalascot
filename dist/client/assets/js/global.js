@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (reviewModalElement && typeof bootstrap !== "undefined") {
     const reviewModal = new bootstrap.Modal(reviewModalElement);
     const modalImage = document.getElementById("reviewModalImage");
+    const modalImageFrame = modalImage.closest(".review-modal-main-image");
     const modalText = document.getElementById("reviewModalText");
     const modalTitle = document.getElementById("reviewModalTitle");
     const modalThumbnails = document.getElementById("reviewModalThumbnails");
@@ -121,8 +122,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         modalText.textContent = `“${button.dataset.reviewText}”`;
         modalTitle.textContent = name;
-        modalImage.src = images[0];
-        modalImage.alt = `${name} tailoring review photo 1`;
+        const showReviewImage = (src, index) => {
+          modalImage.src = src;
+          modalImage.alt = `${name} tailoring review photo ${index + 1}`;
+          modalImageFrame.style.setProperty(
+            "--review-image",
+            `url("${encodeURI(src)}")`,
+          );
+        };
+
+        showReviewImage(images[0], 0);
         modalThumbnails.innerHTML = "";
 
         images.forEach((src, index) => {
@@ -133,8 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           thumbnail.innerHTML = `<img src="${src}" alt="" />`;
 
           thumbnail.addEventListener("click", () => {
-            modalImage.src = src;
-            modalImage.alt = `${name} tailoring review photo ${index + 1}`;
+            showReviewImage(src, index);
             modalThumbnails
               .querySelectorAll(".review-modal-thumb")
               .forEach((item) => item.classList.remove("active"));
