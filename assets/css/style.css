@@ -1738,6 +1738,181 @@ a {
 }
 
 /* =====================================================
+   GOOGLE REVIEWS
+===================================================== */
+
+.google-reviews {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 78px;
+  color: var(--white);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(199, 154, 94, 0.1), transparent 38%),
+    #111413;
+  border-top: 1px solid rgba(199, 154, 94, 0.2);
+}
+
+.reviews-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.reviews-heading h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.google-rating {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.67rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.google-rating > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.google-rating strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.google-g {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: #4285f4;
+  background: #fff;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.reviews-viewport {
+  position: relative;
+}
+
+.reviews-viewport::before,
+.reviews-viewport::after {
+  position: absolute;
+  z-index: 3;
+  top: -20px;
+  bottom: -20px;
+  width: clamp(38px, 7vw, 120px);
+  content: "";
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+.reviews-viewport::before {
+  left: 0;
+  background: linear-gradient(90deg, #111413 20%, rgba(17, 20, 19, 0));
+}
+
+.reviews-viewport::after {
+  right: 0;
+  background: linear-gradient(-90deg, #111413 20%, rgba(17, 20, 19, 0));
+}
+
+.reviews-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  padding: 0 clamp(28px, 7vw, 120px);
+}
+
+.review-card {
+  display: grid;
+  width: min(620px, 72vw);
+  min-height: 270px;
+  overflow: hidden;
+  grid-template-columns: 46% 54%;
+  background: #191d1b;
+  border: 1px solid rgba(199, 154, 94, 0.26);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.review-image {
+  min-height: 270px;
+  overflow: hidden;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.76) contrast(1.04);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.review-card:hover .review-image img {
+  transform: scale(1.035);
+  filter: saturate(0.95) contrast(1.04);
+}
+
+.review-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 32px;
+}
+
+.review-stars {
+  color: #e2ad63;
+  font-size: 0.82rem;
+  letter-spacing: 0.15em;
+}
+
+.review-copy p {
+  margin: 17px 0 22px;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.28rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.review-copy footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.review-copy footer strong {
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.review-copy footer span {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* =====================================================
    CLIENT QUOTE
 ===================================================== */
 
@@ -1795,6 +1970,41 @@ a {
 ===================================================== */
 
 @media (max-width: 767.98px) {
+  .google-reviews {
+    padding: 56px 0 60px;
+  }
+
+  .reviews-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 26px;
+  }
+
+  .review-card {
+    width: min(520px, 84vw);
+    min-height: 230px;
+    grid-template-columns: 43% 57%;
+  }
+
+  .review-image {
+    min-height: 230px;
+  }
+
+  .review-copy {
+    padding: 24px 22px;
+  }
+
+  .review-copy p {
+    margin: 13px 0 18px;
+    font-size: 1.05rem;
+  }
+
+  .review-copy footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
   .quote-band {
     padding-top: 55px !important;
     padding-bottom: 55px !important;
@@ -2485,4 +2695,31 @@ a {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+@media (max-width: 520px) {
+  .reviews-viewport::before,
+  .reviews-viewport::after {
+    width: 24px;
+  }
+
+  .reviews-track {
+    gap: 15px;
+    padding: 0 24px;
+  }
+
+  .review-card {
+    width: 82vw;
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .review-image {
+    min-height: 170px;
+    max-height: 170px;
+  }
+
+  .review-copy {
+    min-height: 210px;
+  }
 }
