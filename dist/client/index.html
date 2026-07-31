@@ -887,8 +887,19 @@
             the final result was elegant without ever feeling overdone.
           </p>
           <footer>
-            <strong>Omar A.</strong>
-            <span>Google Review</span>
+            <div>
+              <strong>Omar A.</strong>
+              <span>Google Review</span>
+            </div>
+            <button
+              class="review-read-more"
+              type="button"
+              data-review-name="Omar A."
+              data-review-text="The tuxedo fit was exceptional. Every detail felt considered, from the first fabric consultation to the final fitting, and the result was elegant without ever feeling overdone. The team understood exactly what I wanted for the occasion and made the entire experience feel personal."
+              data-review-images="/assets/img/wedding-suits/style-black-tie.webp|/assets/img/wedding-suits/process-fitting.webp|/assets/img/wedding-suits/wedding-accessories.webp"
+            >
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
           </footer>
         </div>
       </article>
@@ -908,8 +919,19 @@
             was excellent and the entire fitting experience felt effortless.
           </p>
           <footer>
-            <strong>James R.</strong>
-            <span>Google Review</span>
+            <div>
+              <strong>James R.</strong>
+              <span>Google Review</span>
+            </div>
+            <button
+              class="review-read-more"
+              type="button"
+              data-review-name="James R."
+              data-review-text="My blazer sits perfectly through the shoulders. The fabric advice was excellent and the entire fitting experience felt effortless. I especially appreciated the attention paid to the smaller details and how clearly every option was explained."
+              data-review-images="/assets/img/fabrics/style-jackets.webp|/assets/img/fabrics/process-fitting.webp"
+            >
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
           </footer>
         </div>
       </article>
@@ -929,14 +951,66 @@
             sharp, comfortable and completely personal to me.
           </p>
           <footer>
-            <strong>Khalid M.</strong>
-            <span>Google Review</span>
+            <div>
+              <strong>Khalid M.</strong>
+              <span>Google Review</span>
+            </div>
+            <button
+              class="review-read-more"
+              type="button"
+              data-review-name="Khalid M."
+              data-review-text="Impeccable service from measurement to collection. The suit feels sharp, comfortable and completely personal to me. Each fitting noticeably improved the silhouette, and the finished piece has become the best-fitting suit in my wardrobe."
+              data-review-images="/assets/img/custom-suits/custom-suits-hero.webp|/assets/img/custom-suits/process-measurements.webp|/assets/img/custom-suits/process-final-delivery.webp"
+            >
+              Read more <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
           </footer>
         </div>
       </article>
     </div>
   </div>
 </section>
+
+<div
+  class="modal fade review-modal"
+  id="reviewModal"
+  tabindex="-1"
+  aria-labelledby="reviewModalTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <button
+        type="button"
+        class="review-modal-close"
+        data-bs-dismiss="modal"
+        aria-label="Close review"
+      >
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <div class="review-modal-layout">
+        <div class="review-modal-gallery">
+          <div class="review-modal-main-image">
+            <img id="reviewModalImage" src="" alt="" />
+          </div>
+          <div
+            class="review-modal-thumbnails"
+            id="reviewModalThumbnails"
+            aria-label="Review photos"
+          ></div>
+        </div>
+
+        <div class="review-modal-copy">
+          <div class="review-stars" aria-label="Five out of five stars">★★★★★</div>
+          <div class="review-modal-source">Google Review</div>
+          <blockquote id="reviewModalText"></blockquote>
+          <h3 id="reviewModalTitle"></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- =====================================================
      CLIENT QUOTE

@@ -87,4 +87,62 @@ document.addEventListener("DOMContentLoaded", async () => {
   yearElements.forEach((year) => {
     year.textContent = new Date().getFullYear();
   });
+
+  const reviewsTrack = document.querySelector(".reviews-track");
+
+  if (reviewsTrack && !reviewsTrack.dataset.carouselReady) {
+    reviewsTrack.dataset.carouselReady = "true";
+    [...reviewsTrack.children].forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("button").forEach((button) => {
+        button.setAttribute("tabindex", "-1");
+      });
+      reviewsTrack.appendChild(clone);
+    });
+  }
+
+  const reviewModalElement = document.getElementById("reviewModal");
+
+  if (reviewModalElement && typeof bootstrap !== "undefined") {
+    const reviewModal = new bootstrap.Modal(reviewModalElement);
+    const modalImage = document.getElementById("reviewModalImage");
+    const modalText = document.getElementById("reviewModalText");
+    const modalTitle = document.getElementById("reviewModalTitle");
+    const modalThumbnails = document.getElementById("reviewModalThumbnails");
+
+    document.querySelectorAll(".review-read-more:not([tabindex='-1'])").forEach((button) => {
+      button.addEventListener("click", () => {
+        const images = button.dataset.reviewImages.split("|");
+        const name = button.dataset.reviewName;
+
+        modalText.textContent = `“${button.dataset.reviewText}”`;
+        modalTitle.textContent = name;
+        modalImage.src = images[0];
+        modalImage.alt = `${name} tailoring review photo 1`;
+        modalThumbnails.innerHTML = "";
+
+        images.forEach((src, index) => {
+          const thumbnail = document.createElement("button");
+          thumbnail.type = "button";
+          thumbnail.className = `review-modal-thumb${index === 0 ? " active" : ""}`;
+          thumbnail.setAttribute("aria-label", `Show review photo ${index + 1}`);
+          thumbnail.innerHTML = `<img src="${src}" alt="" />`;
+
+          thumbnail.addEventListener("click", () => {
+            modalImage.src = src;
+            modalImage.alt = `${name} tailoring review photo ${index + 1}`;
+            modalThumbnails
+              .querySelectorAll(".review-modal-thumb")
+              .forEach((item) => item.classList.remove("active"));
+            thumbnail.classList.add("active");
+          });
+
+          modalThumbnails.appendChild(thumbnail);
+        });
+
+        reviewModal.show();
+      });
+    });
+  }
 });
