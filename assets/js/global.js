@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let isDragging = false;
     let dragStartX = 0;
     let dragStartScroll = 0;
+    let resumeAutoSlideAt = 0;
     let lastFrameTime = performance.now();
 
     const normalizeReviewScroll = () => {
@@ -129,7 +130,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       const elapsed = Math.min(time - lastFrameTime, 40);
       lastFrameTime = time;
 
-      if (!isDragging && !reduceMotion && !document.hidden) {
+      if (
+        !isDragging &&
+        time >= resumeAutoSlideAt &&
+        !reduceMotion &&
+        !document.hidden
+      ) {
         reviewsViewport.scrollLeft += elapsed * 0.025;
         normalizeReviewScroll();
       }
@@ -163,6 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const finishReviewDrag = (event) => {
       if (!isDragging) return;
       isDragging = false;
+      resumeAutoSlideAt = performance.now() + 1200;
       reviewsViewport.classList.remove("is-dragging");
       if (reviewsViewport.hasPointerCapture(event.pointerId)) {
         reviewsViewport.releasePointerCapture(event.pointerId);
@@ -178,7 +185,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (reviewModalElement && typeof bootstrap !== "undefined") {
     const reviewModal = new bootstrap.Modal(reviewModalElement);
     const modalImage = document.getElementById("reviewModalImage");
-    const modalImageFrame = modalImage.closest(".review-modal-main-image");
     const modalText = document.getElementById("reviewModalText");
     const modalTitle = document.getElementById("reviewModalTitle");
     const modalThumbnails = document.getElementById("reviewModalThumbnails");
@@ -196,10 +202,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const showReviewImage = (src, index) => {
           modalImage.src = src;
           modalImage.alt = `${name} tailoring review photo ${index + 1}`;
-          modalImageFrame.style.setProperty(
-            "--review-image",
-            `url("${encodeURI(src)}")`,
-          );
         };
 
         showReviewImage(images[0], 0);

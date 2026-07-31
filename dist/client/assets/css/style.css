@@ -1824,7 +1824,6 @@ a {
   width: clamp(38px, 7vw, 120px);
   content: "";
   pointer-events: none;
-  backdrop-filter: blur(4px);
 }
 
 .reviews-viewport::before {
@@ -2036,29 +2035,6 @@ a {
   overflow: hidden;
   place-items: center;
   background: #090c0b;
-  isolation: isolate;
-}
-
-.review-modal-main-image::before {
-  position: absolute;
-  z-index: -2;
-  inset: -24px;
-  content: "";
-  background-image: var(--review-image);
-  background-position: center;
-  background-size: cover;
-  filter: blur(18px) saturate(0.72);
-  transform: scale(1.08);
-}
-
-.review-modal-main-image::after {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  content: "";
-  background:
-    linear-gradient(90deg, rgba(5, 8, 7, 0.5), rgba(5, 8, 7, 0.14)),
-    rgba(8, 11, 10, 0.28);
 }
 
 .review-modal-main-image img {
