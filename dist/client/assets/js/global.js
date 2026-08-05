@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     "custom-suits.html": "suits",
     "wedding-suits.html": "suits",
     "bespoke-suits.html": "suits",
+    "loro-piana-suits.html": "suits",
     "shirts.html": "shirts",
     "fabrics.html": "fabrics",
     "alterations.html": "alterations",

@@ -3,7 +3,7 @@
 }
 
 .fabrics-page {
-  padding-top: 72px;
+  /* padding-top: 72px; */
   background: var(--paper-light);
 }
 
@@ -22,7 +22,7 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(5, 10, 9, 0.95) 0%, rgba(5, 10, 9, 0.28) 24%, rgba(5, 10, 9, 0.04) 58%),
-    url("../img/fabrics/hero-tailoring.webp") center / cover no-repeat;
+    url("../img/loro-piana/hero-tailoring.webp") center / cover no-repeat;
 }
 
 .fabric-hero::after {
@@ -539,7 +539,7 @@
 
 @media (max-width: 991.98px) {
   .fabrics-page {
-    padding-top: 70px;
+    /* padding-top: 70px; */
   }
 
   .fabric-hero {

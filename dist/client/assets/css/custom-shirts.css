@@ -1,0 +1,571 @@
+/* =========================================================
+   CUSTOM SHIRTS PAGE
+   Shared header, footer, colours and AOS are handled globally.
+   ========================================================= */
+
+.shirts-page {
+  --shirt-gold: var(--gold, #b38e59);
+  --shirt-gold-soft: #c6a16c;
+  --shirt-green: var(--dark-bg, #071913);
+  --shirt-green-deep: #03130f;
+  --shirt-paper: var(--paper, #eee6d8);
+  --shirt-paper-light: #f6f1e8;
+  --shirt-ink: #121713;
+  --shirt-line: rgba(92, 68, 37, 0.24);
+  /* padding-top: 72px; */
+  overflow: hidden;
+  background: var(--shirt-paper-light);
+  color: var(--shirt-ink);
+}
+
+.shirts-container {
+  width: min(100%, 1510px);
+  padding-inline: clamp(22px, 4vw, 68px);
+}
+
+.shirts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.shirts-heading > span {
+  width: clamp(42px, 6vw, 82px);
+  height: 1px;
+  background: var(--shirt-gold);
+}
+
+.shirts-heading h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.05rem, 3vw, 3.25rem);
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+.shirts-heading--gold h2 { color: #d4b178; }
+.shirts-heading--dark h2 { color: #1a1a17; }
+.shirts-heading--stacked { display: block; margin-bottom: 18px; }
+.shirts-heading--stacked p {
+  margin: 5px 0 0;
+  color: rgba(255,255,255,.76);
+  font-size: .82rem;
+}
+
+.shirts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.shirts-btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+
+.shirts-btn:hover { transform: translateY(-2px); }
+.shirts-btn--gold {
+  color: #fff;
+  background: linear-gradient(135deg, #b98f50, #8e6733);
+  border-color: #c9a15f;
+}
+.shirts-btn--gold:hover { color: #fff; background: #c09a5b; }
+.shirts-btn--outline {
+  color: #fff;
+  background: rgba(1, 20, 15, .64);
+  border-color: rgba(179, 142, 89, .7);
+}
+.shirts-btn--outline:hover { color: #fff; border-color: #d2ad70; background: rgba(11, 48, 37, .94); }
+.shirts-btn .fa-whatsapp { color: #48dc7c; font-size: 1.15rem; }
+
+/* Hero */
+.shirts-hero {
+  position: relative;
+  min-height: 560px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(2,7,6,.99) 0%, rgba(2,7,6,.96) 31%, rgba(2,7,6,.72) 43%, rgba(2,7,6,.2) 63%, rgba(2,7,6,.04) 100%),
+    url("../img/custom-shirts/custom-shirts-hero.webp") 76% center / cover no-repeat;
+}
+
+.shirts-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(0,0,0,.3), transparent 50%);
+}
+
+.shirts-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 560px;
+  max-width: 635px;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 64px 54px;
+}
+
+.shirts-hero h1 {
+  margin: 0 0 5px;
+  color: #d1a765;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.5rem, 5.8vw, 6rem);
+  font-weight: 600;
+  line-height: .92;
+}
+
+.shirts-hero__subtitle {
+  margin: 0;
+  color: #fff8ec;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.shirts-hero__rule {
+  width: 72px;
+  height: 1px;
+  margin: 18px 0 17px;
+  background: var(--shirt-gold);
+}
+
+.shirts-hero__copy {
+  max-width: 565px;
+  margin: 0 0 26px;
+  color: rgba(255,255,255,.9);
+  font-size: .86rem;
+  line-height: 1.72;
+}
+
+/* Benefits */
+.shirts-benefits {
+  padding: 27px 0 31px;
+  color: #fff;
+  background: radial-gradient(circle at 50% -50%, rgba(179,142,89,.13), transparent 46%), #05251b;
+  border-top: 1px solid rgba(179,142,89,.5);
+  border-bottom: 1px solid rgba(179,142,89,.28);
+}
+
+.shirts-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.shirts-benefit {
+  min-height: 180px;
+  padding: 5px clamp(18px, 2.1vw, 34px) 4px;
+  border-right: 1px solid rgba(203,168,111,.42);
+  text-align: center;
+}
+.shirts-benefit:last-child { border-right: 0; }
+
+.shirts-benefit__icon {
+  display: grid;
+  width: 68px;
+  height: 62px;
+  margin: 0 auto 8px;
+  place-items: center;
+  color: #c9a66c;
+  font-size: 2.35rem;
+}
+
+.shirts-benefit h3,
+.shirts-process-card h3,
+.shirts-option-card h3,
+.shirts-style-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.shirts-benefit h3 {
+  margin: 0 0 7px;
+  color: #d8ba86;
+  font-size: .94rem;
+  line-height: 1;
+}
+
+.shirts-benefit p {
+  max-width: 195px;
+  margin: 0 auto;
+  color: rgba(255,255,255,.9);
+  font-size: .66rem;
+  line-height: 1.55;
+}
+
+/* Process */
+.shirts-process {
+  padding: 26px 0 34px;
+  background: #f5f0e7;
+}
+
+.shirts-process__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(12px, 1.45vw, 21px);
+}
+
+.shirts-process-card {
+  overflow: visible;
+  min-width: 0;
+  background: #f8f3eb;
+  border: 1px solid rgba(146,108,60,.42);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.shirts-process-card__image {
+  position: relative;
+  aspect-ratio: 1.2 / 1;
+  overflow: visible;
+  background: #171c19;
+}
+
+.shirts-process-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shirts-process-card__image span {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  display: grid;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  color: #fff;
+  background: #073526;
+  border: 2px solid #e4d8c7;
+  border-radius: 50%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px rgba(0,0,0,.24);
+}
+
+.shirts-process-card__body {
+  min-height: 130px;
+  padding: 14px 11px 15px;
+}
+
+.shirts-process-card h3 {
+  margin: 0 0 7px;
+  color: #1e231f;
+  font-size: .82rem;
+  line-height: 1.05;
+}
+
+.shirts-process-card p {
+  margin: 0;
+  color: #343a35;
+  font-size: .62rem;
+  line-height: 1.52;
+}
+
+/* Shirt styles */
+.shirts-styles {
+  padding: 28px 0 31px;
+  color: #fff;
+  background: linear-gradient(145deg, #031710, #071f18 52%, #020b08);
+  border-top: 1px solid rgba(179,142,89,.35);
+  border-bottom: 1px solid rgba(179,142,89,.34);
+}
+
+.shirts-styles__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(14px, 1.45vw, 22px);
+}
+
+.shirts-style-card {
+  overflow: hidden;
+  background: #071b15;
+  border: 1px solid rgba(190,147,81,.82);
+  border-radius: 3px;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.shirts-style-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,.26); }
+
+.shirts-style-card img {
+  width: 100%;
+  aspect-ratio: 1.22 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid rgba(190,147,81,.72);
+}
+
+.shirts-style-card div {
+  min-height: 72px;
+  padding: 11px 10px 12px;
+  text-align: center;
+}
+
+.shirts-style-card h3 {
+  margin: 0 0 3px;
+  color: #d5b06f;
+  font-size: .91rem;
+  line-height: 1;
+}
+
+.shirts-style-card p {
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  font-family: "Cormorant Garamond", serif;
+  font-size: .75rem;
+  line-height: 1.25;
+}
+
+/* Customization */
+.shirts-options {
+  padding: 26px 0 30px;
+  background: #f3eee4;
+}
+
+.shirts-options__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1.25vw, 18px);
+}
+
+.shirts-option-card {
+  overflow: hidden;
+  min-width: 0;
+  background: #f8f4ec;
+  border: 1px solid rgba(130,99,58,.32);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.shirts-option-card img {
+  width: 100%;
+  aspect-ratio: 1.27 / .82;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(130,99,58,.26);
+}
+
+.shirts-option-card h3 {
+  min-height: 28px;
+  margin: 9px 8px 4px;
+  color: #2b2923;
+  font-size: .79rem;
+  line-height: 1.05;
+}
+
+.shirts-option-card p {
+  min-height: 60px;
+  margin: 0;
+  padding: 0 10px 12px;
+  color: #45453f;
+  font-size: .59rem;
+  line-height: 1.48;
+}
+
+/* Fabric brands */
+.shirts-fabrics {
+  position: relative;
+  padding: 27px 0 32px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(rgba(2,28,20,.91), rgba(2,28,20,.95)),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 3px, rgba(0,0,0,.04) 3px 9px),
+    #062117;
+  border-top: 1px solid rgba(179,142,89,.42);
+  border-bottom: 1px solid rgba(179,142,89,.5);
+}
+
+.shirts-fabrics__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.shirts-fabric-card {
+  overflow: hidden;
+  min-height: 166px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(195,154,88,.78);
+  border-radius: 6px;
+}
+
+.shirts-fabric-card__brand {
+  display: flex;
+  min-height: 75px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 9px;
+  color: #0f1110;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.94), rgba(219,219,214,.89)),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.16) 0 3px, rgba(20,20,20,.04) 3px 7px);
+  font-family: "Cormorant Garamond", serif;
+  text-align: center;
+}
+
+.shirts-fabric-card__brand strong { font-size: 1.25rem; letter-spacing: .03em; line-height: 1; }
+.shirts-fabric-card__brand small { margin-top: 3px; font-size: .66rem; letter-spacing: .15em; }
+.shirts-fabric-card__brand--small strong { font-size: .95rem; line-height: 1.12; }
+
+.shirts-fabric-card p {
+  margin: 0;
+  padding: 11px 14px 13px;
+  color: #e3d5bd;
+  font-size: .62rem;
+  line-height: 1.47;
+  text-align: center;
+}
+
+/* Showroom */
+.shirts-showroom {
+  display: grid;
+  min-height: 260px;
+  grid-template-columns: 1.1fr 1.15fr 1.05fr;
+  color: #fff;
+  background: linear-gradient(90deg, #061710, #08291d 52%, #061a13);
+}
+
+.shirts-showroom__image { min-height: 260px; overflow: hidden; }
+.shirts-showroom__image img { width: 100%; height: 100%; object-fit: cover; }
+
+.shirts-showroom__details,
+.shirts-showroom__cta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px clamp(24px, 3.3vw, 52px);
+}
+
+.shirts-showroom__details { border-right: 1px solid rgba(179,142,89,.56); }
+.shirts-showroom__details h2 {
+  margin: 0 0 15px;
+  color: #d2ae72;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 600;
+}
+
+.shirts-showroom__details ul { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.shirts-showroom__details li { display: grid; grid-template-columns: 24px 1fr; gap: 11px; align-items: start; }
+.shirts-showroom__details i { color: #d0a55f; font-size: 1rem; padding-top: 3px; }
+.shirts-showroom__details span { color: rgba(255,255,255,.87); font-size: .69rem; line-height: 1.45; }
+.shirts-showroom__details a { color: inherit; text-decoration: none; }
+
+.shirts-showroom__cta { align-items: stretch; text-align: center; }
+.shirts-showroom__cta p {
+  max-width: 390px;
+  margin: 0 auto 18px;
+  color: rgba(255,255,255,.88);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+.shirts-showroom__cta .shirts-btn { width: min(100%, 340px); margin-inline: auto; }
+.shirts-showroom__cta .shirts-btn + .shirts-btn { margin-top: 12px; }
+
+/* Responsive */
+@media (max-width: 1199.98px) {
+  .shirts-page { padding-top: 68px; }
+  .shirts-hero { min-height: 520px; background-position: 70% center; }
+  .shirts-hero__content { min-height: 520px; max-width: 560px; }
+  .shirts-process__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 18px; }
+  .shirts-options__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .shirts-process-card__body { min-height: 118px; }
+}
+
+@media (max-width: 991.98px) {
+  .shirts-page { padding-top: 62px; }
+  .shirts-hero {
+    min-height: 610px;
+    background:
+      linear-gradient(90deg, rgba(2,7,6,.98) 0%, rgba(2,7,6,.9) 45%, rgba(2,7,6,.46) 72%, rgba(2,7,6,.22) 100%),
+      url("../img/custom-shirts/custom-shirts-hero.webp") 72% center / cover no-repeat;
+  }
+  .shirts-hero__content { min-height: 610px; max-width: 515px; }
+  .shirts-benefits__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 23px; }
+  .shirts-benefit { border-right: 1px solid rgba(203,168,111,.35); }
+  .shirts-benefit:nth-child(3) { border-right: 0; }
+  .shirts-benefit:nth-child(n+4) { border-top: 1px solid rgba(203,168,111,.3); padding-top: 24px; }
+  .shirts-styles__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .shirts-fabrics__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .shirts-showroom { grid-template-columns: 1fr 1fr; }
+  .shirts-showroom__image { grid-row: span 2; }
+  .shirts-showroom__details { border-right: 0; border-bottom: 1px solid rgba(179,142,89,.42); }
+}
+
+@media (max-width: 767.98px) {
+  .shirts-page { padding-top: 58px; }
+  .shirts-container { padding-inline: 18px; }
+  .shirts-heading { gap: 10px; }
+  .shirts-heading > span { width: 34px; }
+  .shirts-hero {
+    min-height: 660px;
+    background:
+      linear-gradient(180deg, rgba(1,5,4,.38) 0%, rgba(1,5,4,.55) 30%, rgba(1,5,4,.9) 67%, rgba(1,5,4,.98) 100%),
+      url("../img/custom-shirts/custom-shirts-hero.webp") 64% top / auto 57% no-repeat,
+      #020806;
+  }
+  .shirts-hero__content { min-height: 660px; max-width: 100%; justify-content: flex-end; padding-block: 250px 42px; }
+  .shirts-hero h1 { font-size: clamp(3.15rem, 13vw, 4.35rem); }
+  .shirts-hero__copy { font-size: .78rem; line-height: 1.62; }
+  .shirts-actions { display: grid; grid-template-columns: 1fr; }
+  .shirts-btn { width: 100%; }
+  .shirts-benefits__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shirts-benefit { min-height: 190px; border-top: 1px solid rgba(203,168,111,.28); }
+  .shirts-benefit:nth-child(-n+2) { border-top: 0; }
+  .shirts-benefit:nth-child(2n) { border-right: 0; }
+  .shirts-benefit:last-child { grid-column: 1 / -1; border-right: 0; }
+  .shirts-process__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 13px; }
+  .shirts-styles__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shirts-style-card:last-child { grid-column: 1 / -1; max-width: 360px; justify-self: center; }
+  .shirts-options__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shirts-fabrics__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .shirts-fabric-card:last-child { grid-column: 1 / -1; }
+  .shirts-showroom { grid-template-columns: 1fr; }
+  .shirts-showroom__image { grid-row: auto; min-height: 235px; }
+  .shirts-showroom__details { border-bottom: 1px solid rgba(179,142,89,.42); }
+}
+
+@media (max-width: 479.98px) {
+  .shirts-heading h2 { font-size: 2rem; }
+  .shirts-heading > span { width: 23px; }
+  .shirts-hero__subtitle { font-size: 1.35rem; }
+  .shirts-benefits__grid,
+  .shirts-process__grid,
+  .shirts-styles__grid,
+  .shirts-options__grid,
+  .shirts-fabrics__grid { grid-template-columns: 1fr; }
+  .shirts-benefit { border-right: 0; }
+  .shirts-benefit:nth-child(n) { border-top: 1px solid rgba(203,168,111,.28); padding-top: 22px; }
+  .shirts-benefit:first-child { border-top: 0; }
+  .shirts-style-card:last-child,
+  .shirts-fabric-card:last-child { grid-column: auto; max-width: none; }
+  .shirts-process-card__image { aspect-ratio: 1.45 / 1; }
+  .shirts-option-card img { aspect-ratio: 1.65 / .9; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shirts-btn,
+  .shirts-style-card { transition: none; }
+}
