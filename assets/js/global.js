@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     "alterations.html": "alterations",
     "gallery.html": "gallery",
     "blog.html": "blog",
+    "blog-detail.html": "blog",
     "contact.html": "contact",
   }[currentPage];
 

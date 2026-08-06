@@ -10,6 +10,7 @@
     --white: #ffffff;
     --text-muted: #9ca7a3;
     --paper: #eee6d8;
+    --paper-light: #f7f2e9;
     /* --paper: #EDE8DF; */
     --line: rgba(247, 245, 240, 0.14);
     --line-dark: rgba(27, 29, 30, 0.14);
@@ -29,7 +30,7 @@ body {
 
     margin: 0;
     overflow-x: hidden;
-    background-color: var(--paper) !important;
+    background-color: var(--paper-light) !important;
     /* background-color: var(--dark-bg) !important; */
     color: var(--dark-bg);
     font-family: "Montserrat", sans-serif;
@@ -944,7 +945,7 @@ a {
 
 .services-section {
   color: #1b1d1e;
-  background-color: var(--paper);
+  background-color: var(--paper-light);
 }
 
 .section-eyebrow {
@@ -1003,12 +1004,12 @@ a {
   min-height: 300px;
   flex-direction: column;
   padding: 38px 30px;
-  background-color: var(--paper);
+  background-color: var(--paper-light);
   transition: var(--transition);
 }
 
 .docket:hover {
-  background-color: #e5dfd4;
+  background-color: var(--paper-light);
 }
 
 .docket-punch {
@@ -1350,7 +1351,7 @@ a {
 
 .fabrics-section {
   color: var(--dark-bg);
-  background-color: var(--paper);
+  background-color: var(--paper-light);
 }
 
 .fabrics-title {
@@ -1553,7 +1554,7 @@ a {
 
 .coverage-section {
   color: #1b1d1e;
-  background-color: var(--paper);
+  background-color: var(--paper-light);
 }
 
 .coverage-title {
