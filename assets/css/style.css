@@ -23,13 +23,20 @@
    GENERAL STYLING
 ====================================================== */
 html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
 }
 
 body {
 
+    width: 100%;
+    max-width: 100%;
     margin: 0;
     overflow-x: hidden;
+    overflow-x: clip;
     background-color: var(--paper-light) !important;
     /* background-color: var(--dark-bg) !important; */
     color: var(--dark-bg);
@@ -2618,8 +2625,8 @@ a {
         position: relative;
         background:
             linear-gradient(rgba(9, 22, 19, 0.64),
-                rgba(9, 22, 19, 0.88)),
-            url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png") center top / cover no-repeat;
+                rgba(9, 22, 19, 0.88));
+            /* url("/assets/img/ChatGPT Image Jul 13, 2026, 01_58_18 PM.png") center top / cover no-repeat; */
     }
 
     .hero-content-column {

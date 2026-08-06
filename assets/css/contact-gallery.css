@@ -344,14 +344,18 @@
 }
 
 .contact-map {
-   display: grid;
    min-height: 390px;
-   place-items: center;
    margin-top: 54px;
-   color: rgba(255, 255, 255, .66);
-   text-align: center;
-   background: radial-gradient(circle at center, #17372d, #071913 70%);
+   overflow: hidden;
+   background: #071913;
    border: 1px solid rgba(179, 142, 89, .35);
+}
+
+.contact-map iframe {
+   display: block;
+   width: 100%;
+   min-height: 390px;
+   border: 0;
 }
 
 .contact-map i {
@@ -401,7 +405,7 @@
 
    .editorial-hero {
       min-height: 430px;
-      padding-top: 110px;
+      /* padding-top: 110px; */
    }
 
    .editorial-hero::before {

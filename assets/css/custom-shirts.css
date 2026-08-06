@@ -486,7 +486,7 @@
 
 /* Responsive */
 @media (max-width: 1199.98px) {
-  .shirts-page { padding-top: 68px; }
+  /* .shirts-page { padding-top: 68px; } */
   .shirts-hero { min-height: 520px; background-position: 70% center; }
   .shirts-hero__content { min-height: 520px; max-width: 560px; }
   .shirts-process__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 18px; }
@@ -495,7 +495,7 @@
 }
 
 @media (max-width: 991.98px) {
-  .shirts-page { padding-top: 62px; }
+  /* .shirts-page { padding-top: 62px; } */
   .shirts-hero {
     min-height: 610px;
     background:
@@ -515,7 +515,7 @@
 }
 
 @media (max-width: 767.98px) {
-  .shirts-page { padding-top: 58px; }
+  /* .shirts-page { padding-top: 58px; } */
   .shirts-container { padding-inline: 18px; }
   .shirts-heading { gap: 10px; }
   .shirts-heading > span { width: 34px; }
@@ -548,6 +548,7 @@
 }
 
 @media (max-width: 479.98px) {
+  /* .shirts-page { padding-top: 54px; } */
   .shirts-heading h2 { font-size: 2rem; }
   .shirts-heading > span { width: 23px; }
   .shirts-hero__subtitle { font-size: 1.35rem; }

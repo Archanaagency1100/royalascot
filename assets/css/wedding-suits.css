@@ -462,7 +462,7 @@
 
 /* Responsive */
 @media (max-width: 1199.98px) {
-  .wedding-page { padding-top: 70px; }
+  /* .wedding-page { padding-top: 70px; } */
   .wedding-hero,
   .wedding-hero__content { min-height: 470px; }
   .wedding-benefits__grid { grid-template-columns: repeat(3, 1fr); }
