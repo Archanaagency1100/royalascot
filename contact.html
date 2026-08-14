@@ -14,51 +14,51 @@
   </head>
   <body>
     <div id="headerPlaceholder"></div>
-    <main class="editorial-page">
-      <section class="editorial-hero" aria-labelledby="contactTitle">
-        <div class="editorial-container editorial-hero__content" data-aos="fade-up">
-          <p class="editorial-eyebrow">Royal Ascot Windsor</p>
-          <!-- EDIT: Replace the hero heading and text below. -->
-          <h1 id="contactTitle">Begin Your Bespoke Journey</h1>
-          <span class="editorial-rule" aria-hidden="true"></span>
-          <p class="editorial-lead">Arrange a private consultation, ask a question, or tell us what you would like to create. Replace this introduction whenever your final contact copy is ready.</p>
-        </div>
-      </section>
-
-      <section class="editorial-section">
-        <div class="editorial-container contact-layout">
+    <main class="editorial-page contact-page">
+      <section class="contact-appointment" aria-labelledby="contactTitle">
+        <div class="container-fluid contact-layout px-0">
           <div class="contact-intro" data-aos="fade-right">
-            <p class="editorial-eyebrow">Visit or get in touch</p>
-            <h2>We would be delighted to hear from you.</h2>
-            <p>All details below are grouped into individual blocks so they can be updated independently.</p>
-            <!-- EDIT: Replace the placeholder details below. -->
-            <div class="contact-details">
-              <div class="contact-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><span>Atelier</span><p>Marina Diamond 1, Dubai Marina, Dubai</p></div></div>
-              <div class="contact-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><span>Telephone</span><a href="tel:+971501139891">+971 50 113 9891</a></div></div>
-              <div class="contact-detail"><i class="fa-regular fa-envelope" aria-hidden="true"></i><div><span>Email</span><a href="mailto:Info@royalascot.ae">Info@royalascot.ae</a></div></div>
-              <div class="contact-detail"><i class="fa-regular fa-clock" aria-hidden="true"></i><div><span>Opening hours</span><p>Monday–Saturday · 10:00 AM–8:00 PM</p></div></div>
+            <div class="contact-intro__content">
+              <img class="contact-brand" src="assets/img/cropped-royal.png" alt="Royal Ascot Windsor Men's Tailoring" />
+              <p class="contact-kicker">Private tailoring consultation</p>
+              <h1 id="contactTitle">Book Your<br />Appointment</h1>
+              <span class="contact-ornament" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
+              <p class="contact-intro__lead">Experience the art of bespoke tailoring.<br />Schedule your private consultation with our experts.</p>
+              <div class="contact-details">
+                <div class="contact-detail"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><div><span>Visit our showroom</span><p>Marina Diamond 1, Dubai Marina, Dubai</p></div></div>
+                <div class="contact-detail"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><span>Call us</span><a href="tel:+971501139891">+971 50 113 9891</a></div></div>
+                <div class="contact-detail"><i class="fa-regular fa-envelope" aria-hidden="true"></i><div><span>Email us</span><a href="mailto:Info@royalascot.ae">Info@royalascot.ae</a></div></div>
+                <div class="contact-detail"><i class="fa-regular fa-clock" aria-hidden="true"></i><div><span>Showroom hours</span><p>Monday–Saturday: 10:00 AM–8:00 PM<br />Sunday: By appointment</p></div></div>
+              </div>
             </div>
           </div>
 
           <div class="contact-form-card" data-aos="fade-left">
-            <p class="editorial-eyebrow">Appointment request</p>
-            <h2>Tell us what you need.</h2>
-            <p>This form is ready for your preferred form service or backend. Its fields can be renamed or removed directly in this block.</p>
-            <!-- EDIT: Add your form endpoint to the action attribute. -->
+            <div class="contact-form-heading">
+              <h2>Contact Us</h2>
+              <span class="contact-heading-rule" aria-hidden="true"><i class="fa-solid fa-scissors"></i></span>
+              <h3>Book an Appointment</h3>
+              <p>Fill in your details below and our team will get in touch<br />to confirm your appointment.</p>
+            </div>
             <form class="contact-form" action="#" method="post">
-              <div class="contact-field"><label for="contactName">Full name</label><input id="contactName" name="name" type="text" placeholder="Your name" /></div>
-              <div class="contact-field"><label for="contactPhone">Phone</label><input id="contactPhone" name="phone" type="tel" placeholder="Your phone number" /></div>
-              <div class="contact-field contact-field--full"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" placeholder="you@example.com" /></div>
-              <div class="contact-field contact-field--full"><label for="contactService">Service</label><select id="contactService" name="service"><option value="">Choose a service</option><option>Custom suit</option><option>Custom shirt</option><option>Wedding tailoring</option><option>Alterations</option><option>Other enquiry</option></select></div>
-              <div class="contact-field contact-field--full"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" placeholder="How can we help?"></textarea></div>
-              <button class="contact-submit" type="submit">Send Appointment Request</button>
+              <div class="contact-field"><label for="contactName">Full name *</label><div class="contact-control"><i class="fa-regular fa-user"></i><input id="contactName" name="name" type="text" placeholder="Your full name" required /></div></div>
+              <div class="contact-field"><label for="contactEmail">Email address *</label><div class="contact-control"><i class="fa-regular fa-envelope"></i><input id="contactEmail" name="email" type="email" placeholder="Your email address" required /></div></div>
+              <div class="contact-field"><label for="contactPhone">Phone number *</label><div class="contact-control"><i class="fa-solid fa-phone"></i><input id="contactPhone" name="phone" type="tel" placeholder="Your phone number" required /></div></div>
+              <div class="contact-field"><label for="contactWhatsapp">WhatsApp number</label><div class="contact-control"><i class="fa-brands fa-whatsapp"></i><input id="contactWhatsapp" name="whatsapp" type="tel" placeholder="Your WhatsApp number" /></div></div>
+              <div class="contact-field"><label for="contactDate">Preferred date *</label><input id="contactDate" name="date" type="date" required /></div>
+              <div class="contact-field"><label for="contactTime">Preferred time *</label><input id="contactTime" name="time" type="time" required /></div>
+              <div class="contact-field contact-field--full"><label for="contactService">Service interested in *</label><select id="contactService" name="service" required><option value="">Select a service</option><option>Custom suit</option><option>Custom shirt</option><option>Wedding tailoring</option><option>Alterations</option><option>Other enquiry</option></select></div>
+              <div class="contact-field contact-field--full"><label for="contactMessage">Your message / special request</label><textarea id="contactMessage" name="message" placeholder="Tell us more about your requirements..."></textarea></div>
+              <label class="contact-consent"><input type="checkbox" name="consent" required /><span>I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms &amp; Conditions</a>.</span></label>
+              <button class="contact-submit" type="submit">Submit Appointment Request</button>
+              <p class="contact-signoff"><span aria-hidden="true">✂</span>Bespoke. Made for you.</p>
             </form>
           </div>
         </div>
       </section>
 
       <section class="editorial-section editorial-section--dark">
-        <div class="editorial-container">
+        <div class="container-fluid editorial-container">
           <div class="editorial-heading"><p class="editorial-eyebrow">Find us</p><h2>Dubai Marina Atelier</h2><p>Visit us at Marina Diamond 1 in the heart of Dubai Marina.</p></div>
           <div class="contact-map">
             <iframe

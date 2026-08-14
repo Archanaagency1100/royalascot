@@ -139,7 +139,7 @@
 /* HERO */
 .custom-suits-hero {
   position: relative;
-  min-height: 468px;
+  min-height: 568px;
   overflow: hidden;
   color: #fff;
   background: #030706;
@@ -151,7 +151,8 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(3, 7, 6, 0.92) 0%, rgba(3, 7, 6, 0.18) 33%, rgba(3, 7, 6, 0.02) 70%),
-    url("../img/custom-suits/custom-suits-hero.webp") center 44% / cover no-repeat;
+    url("../img/custom-suits/CSHERO.webp") center 44% / cover no-repeat;
+  background-position: top;
 }
 
 .custom-suits-hero::after {
@@ -172,7 +173,7 @@
   max-width: 565px;
   flex-direction: column;
   justify-content: center;
-  padding-block: 54px 48px;
+  padding-block: 100px 48px;
 }
 
 .custom-suits-hero h1 {
@@ -640,7 +641,7 @@
 
   .custom-suits-hero::before {
     inset: 0;
-    background: url("../img/custom-suits/custom-suits-hero.webp") 61% center / cover no-repeat;
+    background: url("../img/custom-suits/CSHERO.webp") 61% center / cover no-repeat;
   }
 
   .custom-suits-hero::after {

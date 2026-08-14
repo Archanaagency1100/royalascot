@@ -5,7 +5,7 @@
   --dark-secondary: #0d1d19;
   --dark-light: #122520;
   --white: #ffffff;
-  --text-muted: #9ca7a3;
+  --text-muted: #bbbebd;
   --paper: #eee6d8;
   --paper-light: #f7f2e9;
   --line: rgba(247, 245, 240, 0.14);
@@ -483,6 +483,38 @@ a {
 
   .floating-whatsapp {
     display: inline-flex;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Improve paragraph contrast on dark and image-led mobile sections. */
+  .hero-section p,
+  .bespoke-intro p,
+  .process-section p,
+  .quote-band p,
+  .cta-band p,
+  .site-footer p,
+  .editorial-hero p,
+  .editorial-section--dark p,
+  .blog-hero p,
+  .blog-subscribe p,
+  .custom-suits-hero p,
+  .custom-fabrics p,
+  .custom-consultation p,
+  .shirts-hero p,
+  .shirts-dark p,
+  .shirts-showroom p,
+  .alterations-hero p,
+  .alterations-dark p,
+  .wedding-hero p,
+  .wedding-styles p,
+  .wedding-consultation p,
+  .wedding-fabrics p,
+  .fc-hero p,
+  .fc-dark p,
+  .fabric-page-body .lp-hero p,
+  .fabric-page-body .lp-dark p {
+    color: rgba(255, 255, 255, 0.9) !important;
   }
 }
 

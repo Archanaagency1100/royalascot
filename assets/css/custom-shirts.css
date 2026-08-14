@@ -19,7 +19,7 @@
 }
 
 .shirts-container {
-  width: min(100%, 1510px);
+  /* width: min(100%, 1510px); */
   padding-inline: clamp(22px, 4vw, 68px);
 }
 
@@ -100,8 +100,9 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(2,7,6,.99) 0%, rgba(2,7,6,.96) 31%, rgba(2,7,6,.72) 43%, rgba(2,7,6,.2) 63%, rgba(2,7,6,.04) 100%),
-    url("../img/custom-shirts/custom-shirts-hero.webp") 76% center / cover no-repeat;
-}
+    url("../img/custom-shirts/Royal-Ascot-Banner-1920x600.webp") 76% center / cover no-repeat;
+  background-position:right center;
+  }
 
 .shirts-hero::after {
   position: absolute;
@@ -207,7 +208,7 @@
   max-width: 195px;
   margin: 0 auto;
   color: rgba(255,255,255,.9);
-  font-size: .66rem;
+  font-size: .76rem;
   line-height: 1.55;
 }
 
@@ -226,7 +227,7 @@
 .shirts-process-card {
   overflow: visible;
   min-width: 0;
-  background: #f8f3eb;
+  background: #f5e4cc;
   border: 1px solid rgba(146,108,60,.42);
   border-radius: 4px;
   text-align: center;
@@ -266,19 +267,22 @@
 .shirts-process-card__body {
   min-height: 130px;
   padding: 14px 11px 15px;
+ 
 }
 
 .shirts-process-card h3 {
   margin: 0 0 7px;
   color: #1e231f;
-  font-size: .82rem;
+  font-size: .92rem;
   line-height: 1.05;
+  margin:auto;
+  font-weight:900
 }
 
 .shirts-process-card p {
   margin: 0;
   color: #343a35;
-  font-size: .62rem;
+  font-size: .72rem;
   line-height: 1.52;
 }
 
@@ -500,7 +504,7 @@
     min-height: 610px;
     background:
       linear-gradient(90deg, rgba(2,7,6,.98) 0%, rgba(2,7,6,.9) 45%, rgba(2,7,6,.46) 72%, rgba(2,7,6,.22) 100%),
-      url("../img/custom-shirts/custom-shirts-hero.webp") 72% center / cover no-repeat;
+      url("../img/custom-shirts/Royal-Ascot-Banner-1920x600.webp") 72% center / cover no-repeat;
   }
   .shirts-hero__content { min-height: 610px; max-width: 515px; }
   .shirts-benefits__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 23px; }
@@ -523,7 +527,7 @@
     min-height: 660px;
     background:
       linear-gradient(180deg, rgba(1,5,4,.38) 0%, rgba(1,5,4,.55) 30%, rgba(1,5,4,.9) 67%, rgba(1,5,4,.98) 100%),
-      url("../img/custom-shirts/custom-shirts-hero.webp") 64% top / auto 57% no-repeat,
+      url("../img/custom-shirts/SHIRTS.webp") 64% top / auto 57% no-repeat,
       #020806;
   }
   .shirts-hero__content { min-height: 660px; max-width: 100%; justify-content: flex-end; padding-block: 250px 42px; }

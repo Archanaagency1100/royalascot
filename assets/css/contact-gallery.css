@@ -7,7 +7,7 @@
 }
 
 .editorial-container {
-   width: min(100%, 1510px);
+   /* width: min(100%, 1510px); */
    margin-inline: auto;
    padding-inline: clamp(22px, 4vw, 68px);
 }
@@ -432,4 +432,56 @@
    .contact-field--full, .contact-submit {
       grid-column: auto;
    }
+}
+
+/* Contact appointment layout */
+.contact-appointment { padding: clamp(22px, 3vw, 48px); background: #081a15; }
+.contact-page .contact-layout { display: grid; grid-template-columns: minmax(330px, .82fr) minmax(560px, 1.18fr); max-width: 1540px; margin-inline: auto; gap: 0; overflow: hidden; align-items: stretch; border-radius: 14px; background: #f8f3ec; box-shadow: 0 30px 80px rgba(0, 0, 0, .25); }
+.contact-page .contact-intro { position: relative; min-height: 940px; padding: clamp(48px, 5vw, 76px) clamp(30px, 4vw, 64px); color: #fff; background: linear-gradient(90deg, rgba(1, 11, 21, .97) 0%, rgba(3, 14, 25, .87) 44%, rgba(3, 14, 25, .18) 100%), url("../img/custom-suits/custom-suits-hero.webp") 52% center / cover no-repeat; }
+.contact-intro__content { position: relative; z-index: 1; max-width: 390px; }
+.contact-brand { width: min(245px, 72%); height: auto; margin-bottom: 58px; filter: sepia(.18) saturate(.8); }
+.contact-kicker { margin: 0 0 12px; color: #c6a46d; font-size: .64rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.contact-page .contact-intro h1 { margin: 0; color: #fff; font-family: "Cormorant Garamond", serif; font-size: clamp(3rem, 4vw, 4.5rem); font-weight: 600; line-height: .98; text-transform: uppercase; }
+.contact-ornament, .contact-heading-rule { display: flex; align-items: center; gap: 10px; width: 210px; margin: 27px 0; color: #b99359; }
+.contact-ornament::before, .contact-ornament::after, .contact-heading-rule::before, .contact-heading-rule::after { content: ""; flex: 1; height: 1px; background: #b99359; }
+.contact-ornament i, .contact-heading-rule i { font-size: .9rem; transform: rotate(-12deg); }
+.contact-intro__lead { margin: 0 0 38px; color: rgba(255,255,255,.84); font-size: .78rem; line-height: 1.8; }
+.contact-page .contact-details { margin-top: 26px; border: 0; }
+.contact-page .contact-detail { display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding: 11px 0; border: 0; }
+.contact-page .contact-detail > i { display: grid; width: 43px; height: 43px; padding: 0; place-items: center; color: #c5a168; border: 1px solid #9d7d4f; border-radius: 50%; }
+.contact-page .contact-detail span { margin-bottom: 3px; color: #fff; font-size: .6rem; font-weight: 700; letter-spacing: .13em; }
+.contact-page .contact-detail p, .contact-page .contact-detail a { margin: 0; color: rgba(255,255,255,.8); font-family: "Montserrat", sans-serif; font-size: .68rem; line-height: 1.6; }
+.contact-page .contact-form-card { padding: clamp(42px, 5vw, 76px) clamp(30px, 5vw, 72px); background: #f8f3ec; border: 0; box-shadow: none; }
+.contact-form-heading { margin-bottom: 32px; text-align: center; }
+.contact-form-heading h2 { margin: 0; color: #081a15; font-family: "Cormorant Garamond", serif; font-size: clamp(2.8rem, 4vw, 4.1rem); font-weight: 600; line-height: 1; text-transform: uppercase; }
+.contact-heading-rule { width: 330px; max-width: 70%; margin: 18px auto; }
+.contact-form-heading h3 { margin: 0 0 12px; color: #aa8350; font-family: "Cormorant Garamond", serif; font-size: clamp(1.45rem, 2vw, 2rem); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.contact-form-heading p { margin: 0; color: #081a15; font-size: .76rem; line-height: 1.65; }
+.contact-page .contact-form { gap: 20px 22px; }
+.contact-page .contact-field input, .contact-page .contact-field select, .contact-page .contact-field textarea { border-radius: 4px; background: rgba(255,255,255,.36); }
+.contact-page .contact-field textarea { min-height: 92px; }
+.contact-control { position: relative; }
+.contact-control i { position: absolute; left: 14px; top: 50%; z-index: 1; color: #8b8b87; transform: translateY(-50%); }
+.contact-control input { padding-left: 42px !important; }
+.contact-page .contact-submit { color: #c9a368; background: #081a15; border: 1px solid #081a15; }
+.contact-page .contact-submit:hover { color: #fff; background: #081a15; }
+.contact-consent { grid-column: 1 / -1; display: flex; gap: 9px; align-items: center; color: #2c3440; font-size: .68rem; }
+.contact-consent input { accent-color: #a9834d; }
+.contact-consent a { color: #a17b45; text-decoration: none; }
+.contact-signoff { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 12px; margin: -3px 0 0; color: #081a15; font-family: "Cormorant Garamond", serif; font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; }
+.contact-signoff span { color: #b38e59; }
+
+@media (max-width: 991.98px) {
+   .contact-page .contact-layout { grid-template-columns: 1fr; }
+   .contact-page .contact-intro { min-height: 720px; background-position: center; }
+   .contact-intro__content { max-width: 480px; }
+}
+
+@media (max-width: 767.98px) {
+   .contact-appointment { padding: 12px; }
+   .contact-page .contact-layout { border-radius: 8px; }
+   .contact-page .contact-intro { min-height: 680px; padding: 42px 26px; }
+   .contact-brand { margin-bottom: 38px; }
+   .contact-page .contact-form-card { padding: 42px 22px; }
+   .contact-consent, .contact-signoff { grid-column: auto; }
 }
