@@ -537,7 +537,7 @@
   .alterations-actions { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
   .alterations-btn { padding-inline: 13px; font-size: 0.64rem; }
   .alterations-benefits__grid { grid-template-columns: 1fr; }
-  .alterations-benefit:last-child { grid-column: auto; width: auto; }
+  .alterations-benefit:last-child { grid-column: auto; width: auto; justify-self: stretch; }
   .alterations-benefit { min-height: auto; padding-block: 20px; }
   .alterations-process__grid,
   .alterations-services__grid,

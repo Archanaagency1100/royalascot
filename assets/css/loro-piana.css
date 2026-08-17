@@ -793,6 +793,16 @@
     grid-template-columns: 1fr;
   }
 
+  .process-row {
+    justify-items: center;
+  }
+
+  .process-card {
+    width: 100%;
+    max-width: 307px;
+    justify-self: center;
+  }
+
   .fabric-highlight-card:last-child,
   .style-card:last-child {
     grid-column: auto;
@@ -804,7 +814,9 @@
   }
 
   .process-image {
-    max-height: 240px;
+    width: 100%;
+    max-height: none;
+    margin-inline: auto;
   }
 
   .process-card p,
