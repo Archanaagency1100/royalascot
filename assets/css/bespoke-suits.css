@@ -740,6 +740,7 @@
   .bs-process-step:last-child {
     grid-column: auto;
     width: auto;
+    justify-self: stretch;
   }
 
   .bs-style-card figure {

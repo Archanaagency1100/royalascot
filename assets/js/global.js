@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     const reviewsViewport = reviewsTrack.closest(".reviews-viewport");
+    const useManualReviewCarousel = window.matchMedia("(max-width: 520px)").matches;
     let isDragging = false;
     let dragStartX = 0;
     let dragStartScroll = 0;
@@ -130,6 +131,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       lastFrameTime = time;
 
       if (
+        !useManualReviewCarousel &&
         !isDragging &&
         time >= resumeAutoSlideAt &&
         !document.hidden
@@ -141,7 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       window.requestAnimationFrame(moveReviews);
     };
 
-    reviewsViewport.scrollLeft = 1;
+    reviewsViewport.scrollLeft = useManualReviewCarousel ? 0 : 1;
     window.requestAnimationFrame(moveReviews);
 
     reviewsViewport.addEventListener("pointerdown", (event) => {

@@ -1825,13 +1825,7 @@ a {
 
 .reviews-viewport::before,
 .reviews-viewport::after {
-  position: absolute;
-  z-index: 3;
-  top: -20px;
-  bottom: -20px;
-  width: clamp(38px, 7vw, 120px);
-  content: "";
-  pointer-events: none;
+  display: none;
 }
 
 .reviews-viewport::before {
@@ -2940,17 +2934,20 @@ a {
 @media (max-width: 520px) {
   .reviews-viewport::before,
   .reviews-viewport::after {
-    width: 24px;
+    display: none;
   }
 
   .reviews-track {
-    gap: 15px;
+    gap: 14px;
+    padding-inline: 18px;
   }
 
   .review-card {
-    width: 82vw;
+    width: calc(100vw - 36px);
+    max-width: 390px;
     height: 420px;
     min-height: 420px;
+    flex: 0 0 auto;
     grid-template-columns: 1fr;
   }
 
