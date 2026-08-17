@@ -42,7 +42,7 @@
 
 .bs-hero-media {
   z-index: -3;
-  background-image: url("../img/bespoke-suits/bespoke-hero.webp");
+  background-image: url("../img/bespoke-suits/b-hero.webp");
   background-position: center;
   background-size: cover;
 }
@@ -61,7 +61,7 @@
 .bs-hero-copy {
   max-width: 600px;
   padding: 76px 0 58px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .bs-eyebrow {
@@ -93,7 +93,7 @@
 
 .bs-title-divider {
   width: min(100%, 360px);
-  margin: 20px auto 11px;
+  /* margin: 20px auto 11px; */
 }
 
 .bs-title-divider::before,
@@ -182,7 +182,7 @@
 .bs-location {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 11px;
   margin: 25px 0 0;
   color: #efe4d3;

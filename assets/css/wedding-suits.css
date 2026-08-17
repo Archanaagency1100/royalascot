@@ -17,7 +17,7 @@
 }
 
 .wedding-container {
-  width: min(100%, 1460px);
+  /* width: min(100%, 1460px); */
   padding-inline: clamp(24px, 4.7vw, 72px);
 }
 
@@ -100,7 +100,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(1, 6, 5, 0.98) 0%, rgba(1, 6, 5, 0.92) 31%, rgba(1, 6, 5, 0.24) 56%, rgba(1, 6, 5, 0.03) 100%),
-    url("../img/wedding-suits/wedding-suits-hero.webp") center / cover no-repeat;
+    url("../img/wedding-suits/wedding-hero.webp") center / cover no-repeat;
 }
 
 .wedding-hero::after {

@@ -22,7 +22,7 @@
   content: "";
   background:
     linear-gradient(90deg, rgba(5, 10, 9, 0.95) 0%, rgba(5, 10, 9, 0.28) 24%, rgba(5, 10, 9, 0.04) 58%),
-    url("../img/loro-piana/hero-tailoring.webp") center / cover no-repeat;
+    url("../img/loro-piana/lora\ piana\ hero.webp") center / cover no-repeat;
 }
 
 .fabric-hero::after {
@@ -550,7 +550,7 @@
     inset: 0;
     background:
       linear-gradient(90deg, rgba(5, 10, 9, 0.94), rgba(5, 10, 9, 0.45)),
-      url("../img/fabrics/hero-tailoring.webp") 62% center / cover no-repeat;
+      url("../img/fabrics/lora\ piana\ hero.webp") 62% center / cover no-repeat;
   }
 
   .fabric-hero::after {

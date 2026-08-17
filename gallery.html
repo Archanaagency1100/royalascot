@@ -18,10 +18,9 @@
       <section class="editorial-hero" aria-labelledby="galleryTitle">
         <div class="editorial-container editorial-hero__content" data-aos="fade-up">
           <p class="editorial-eyebrow">Selected work</p>
-          <!-- EDIT: Replace the hero heading and text below. -->
           <h1 id="galleryTitle">Crafted for the Individual</h1>
           <span class="editorial-rule" aria-hidden="true"></span>
-          <p class="editorial-lead">A considered collection of tailoring, cloth and finishing details. The gallery below is prepared for your final photography and captions.</p>
+          <p class="editorial-lead">A considered collection of bespoke tailoring, exceptional cloth and finishing details from the Royal Ascot atelier.</p>
         </div>
       </section>
 
@@ -29,27 +28,95 @@
         <div class="container-fluid gallery-container-fluid">
           <!-- <div class="editorial-heading" data-aos="fade-up"><p class="editorial-eyebrow">Selected work</p><h2 id="galleryCollectionTitle">Crafted for the Individual</h2><p>Replace any placeholder with an image while keeping the existing figure and caption structure.</p></div> -->
 
-          <!-- EDITING GUIDE: Replace <div class="gallery-placeholder">...</div> with
-               <img src="assets/img/gallery/your-image.webp" alt="Describe the image" /> -->
           <div class="gallery-grid">
-            <figure class="gallery-card gallery-card--wide" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Featured image · 1600 × 1000</span></div></div><figcaption><h3>Signature Tailoring</h3><p>Replace with a short caption describing the garment, occasion, or client story.</p></figcaption></figure>
-            <figure class="gallery-card" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Portrait image · 900 × 1200</span></div></div><figcaption><h3>Fine Details</h3><p>Placeholder caption for buttons, lapels, stitching, or finishing.</p></figcaption></figure>
-            <figure class="gallery-card" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Portrait image · 900 × 1200</span></div></div><figcaption><h3>Cloth Selection</h3><p>Placeholder caption for fabric books, textures, colours, or mills.</p></figcaption></figure>
-            <figure class="gallery-card gallery-card--wide" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Featured image · 1600 × 1000</span></div></div><figcaption><h3>Inside the Atelier</h3><p>Placeholder caption for fittings, cutting, consultations, or craftsmanship.</p></figcaption></figure>
-            <figure class="gallery-card" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Portrait image · 900 × 1200</span></div></div><figcaption><h3>Wedding Style</h3><p>Placeholder caption for a wedding suit or groom’s styling story.</p></figcaption></figure>
-            <figure class="gallery-card" data-aos="fade-up"><div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i><span>Portrait image · 900 × 1200</span></div></div><figcaption><h3>The Final Fit</h3><p>Placeholder caption for a completed look or finished commission.</p></figcaption></figure>
+            <figure class="gallery-card gallery-card--wide" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/bespoke-suit-dubai.webp" alt="Gentleman wearing a bespoke navy suit in a Dubai showroom" role="button" tabindex="0" /><figcaption><h3>Signature Tailoring</h3><p>A sharp bespoke silhouette, balanced for comfort and a confident final fit.</p></figcaption></figure>
+            <figure class="gallery-card" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/cufflink-detail.webp" alt="White French cuff shirt finished with a gold cufflink" role="button" tabindex="0" loading="lazy" /><figcaption><h3>Fine Details</h3><p>Considered finishing touches bring character and distinction to every commission.</p></figcaption></figure>
+            <figure class="gallery-card" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/luxury-fabric-books.webp" alt="Dormeuil and Scabal luxury tailoring fabric books" role="button" tabindex="0" loading="lazy" /><figcaption><h3>Cloth Selection</h3><p>Exceptional cloths from renowned mills, selected for texture, drape and occasion.</p></figcaption></figure>
+            <figure class="gallery-card gallery-card--wide" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/tailoring-atelier.webp" alt="Royal Ascot tailoring atelier with fabric shelves and cutting table" role="button" tabindex="0" loading="lazy" /><figcaption><h3>Inside the Atelier</h3><p>Where cloth, measurements and craftsmanship come together with exacting care.</p></figcaption></figure>
+            <figure class="gallery-card" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/cloth-consultation.webp" alt="Tailor presenting a curated cloth selection to a client" role="button" tabindex="0" loading="lazy" /><figcaption><h3>Personal Consultation</h3><p>A guided selection shaped around personal style, setting and season.</p></figcaption></figure>
+            <figure class="gallery-card" data-aos="fade-up"><img class="gallery-lightbox-trigger" src="assets/img/gallery/evening-tailoring.webp" alt="Gentleman in formal black tailoring at the Royal Ascot showroom" role="button" tabindex="0" loading="lazy" /><figcaption><h3>Evening Tailoring</h3><p>Refined formalwear designed for elegant entrances and memorable occasions.</p></figcaption></figure>
           </div>
           <!-- <p class="gallery-help editable-note">Tip: duplicate or remove any complete &lt;figure&gt; block to change the number of gallery items.</p> -->
         </div>
       </section>
 
       <section class="editorial-section editorial-section--dark">
-        <div class="editorial-container editorial-heading"><p class="editorial-eyebrow">Your story, tailored</p><h2>Ready to Create Your Own?</h2><p>Replace this call-to-action copy whenever your final campaign messaging is ready.</p><a class="btn-royal btn-royal-gold mt-4" href="contact.html">Book a Consultation</a></div>
+        <div class="editorial-container editorial-heading"><p class="editorial-eyebrow">Your story, tailored</p><h2>Ready to Create Your Own?</h2><p>Begin a personal commission shaped around your style, occasion and preferences.</p><a class="btn-royal btn-royal-gold mt-4" href="contact.html">Book a Consultation</a></div>
       </section>
     </main>
+
+    <div class="modal fade gallery-lightbox" id="galleryLightbox" tabindex="-1" aria-labelledby="galleryLightboxTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="galleryLightboxTitle">Gallery image</h2>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev" id="galleryLightboxPrev" aria-label="Previous image">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <img id="galleryLightboxImage" src="" alt="" />
+            <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" id="galleryLightboxNext" aria-label="Next image">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="footerPlaceholder"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/global.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lightboxElement = document.getElementById("galleryLightbox");
+        const lightboxImage = document.getElementById("galleryLightboxImage");
+        const lightboxTitle = document.getElementById("galleryLightboxTitle");
+        const previousButton = document.getElementById("galleryLightboxPrev");
+        const nextButton = document.getElementById("galleryLightboxNext");
+        const galleryImages = [...document.querySelectorAll(".gallery-lightbox-trigger")];
+        const lightbox = new bootstrap.Modal(lightboxElement);
+        let currentIndex = 0;
+
+        const showImage = (index) => {
+          currentIndex = (index + galleryImages.length) % galleryImages.length;
+          const image = galleryImages[currentIndex];
+          const title = image.closest(".gallery-card").querySelector("h3").textContent;
+          lightboxImage.src = image.src;
+          lightboxImage.alt = image.alt;
+          lightboxTitle.textContent = title;
+        };
+
+        galleryImages.forEach((image, index) => {
+          const openLightbox = () => {
+            showImage(index);
+            lightbox.show();
+          };
+
+          image.addEventListener("click", openLightbox);
+          image.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              openLightbox();
+            }
+          });
+        });
+
+        previousButton.addEventListener("click", () => showImage(currentIndex - 1));
+        nextButton.addEventListener("click", () => showImage(currentIndex + 1));
+
+        lightboxElement.addEventListener("keydown", (event) => {
+          if (event.key === "ArrowLeft") showImage(currentIndex - 1);
+          if (event.key === "ArrowRight") showImage(currentIndex + 1);
+        });
+
+        lightboxElement.addEventListener("hidden.bs.modal", () => {
+          lightboxImage.src = "";
+          lightboxImage.alt = "";
+        });
+      });
+    </script>
   </body>
 </html>

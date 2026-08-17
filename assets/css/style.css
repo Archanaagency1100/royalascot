@@ -189,7 +189,7 @@ a {
    DESKTOP SERVICES DROPDOWN
 ====================================================== */
 .nav-dropdown {
-    padding-bottom: 4px;
+    padding-bottom: 0;
 }
 
 .services-dropdown {

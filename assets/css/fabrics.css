@@ -32,7 +32,7 @@
   border-bottom: 1px solid rgba(179, 142, 89, 0.38);
   background: #04110f;
   isolation: isolate;
-  background-image: url("../img/fabrics-collection/fabrics-hero.webp");
+  background-image: url("../img/fabrics-collection/fabric-hero.webp");
   background-position: center;
   background-size: cover;
 }
@@ -644,7 +644,7 @@
   color: #fff;
   background:
     linear-gradient(90deg, rgba(2,7,6,.99) 0%, rgba(2,7,6,.96) 31%, rgba(2,7,6,.72) 43%, rgba(2,7,6,.2) 63%, rgba(2,7,6,.04) 100%),
-    url("../img/fabrics-collection/fabrics-hero.webp") 76% center / cover no-repeat;
+    url("../img/fabrics-collection/fabric-hero.webp") 76% center / cover no-repeat;
 }
 
 .fc-hero-shade {
