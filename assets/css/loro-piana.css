@@ -3,7 +3,7 @@
 }
 
 .fabrics-page {
-  /* padding-top: 72px; */
+  overflow: hidden;
   background: var(--paper-light);
 }
 
@@ -154,7 +154,7 @@
   max-width: 185px;
   margin: 0 auto;
   color: #2d302e;
-  font-size: 0.66rem;
+  font-size: 0.74rem;
   line-height: 1.55;
 }
 
@@ -194,33 +194,38 @@
 .process-image {
   position: relative;
   aspect-ratio: 1.28 / 1;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid rgba(179, 142, 89, 0.52);
   border-radius: 4px;
   background: #d8d0c2;
 }
 
 .process-image img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 3px;
 }
 
 .process-number {
   position: absolute;
   bottom: -14px;
   left: 50%;
-  display: flex;
+  display: grid;
   width: 29px;
   height: 29px;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  place-items: center;
   color: var(--white);
   background: var(--gold);
   border: 2px solid #fbf7ef;
   border-radius: 50%;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
   transform: translateX(-50%);
 }
 
@@ -237,7 +242,7 @@
   max-width: 160px;
   margin: 0 auto;
   color: #343633;
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   line-height: 1.45;
 }
 
@@ -367,7 +372,7 @@
   max-width: 580px;
   margin: 0;
   color: #343633;
-  font-size: 0.67rem;
+  font-size: 0.76rem;
   line-height: 1.6;
 }
 
@@ -404,7 +409,7 @@
 .luxury-use p {
   margin: 0;
   color: #484a47;
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   line-height: 1.45;
 }
 
@@ -459,7 +464,7 @@
 .cta-copy p {
   margin: 0 0 10px;
   color: rgba(255, 255, 255, 0.76);
-  font-size: 0.67rem;
+  font-size: 0.76rem;
 }
 
 .cta-actions {
@@ -506,7 +511,7 @@
 .cta-contact-row span,
 .cta-contact-row a {
   color: rgba(255, 255, 255, 0.76);
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   line-height: 1.35;
 }
 
@@ -550,7 +555,7 @@
     inset: 0;
     background:
       linear-gradient(90deg, rgba(5, 10, 9, 0.94), rgba(5, 10, 9, 0.45)),
-      url("../img/fabrics/lora\ piana\ hero.webp") 62% center / cover no-repeat;
+      url("../img/loro-piana/lora\ piana\ hero.webp") 62% center / cover no-repeat;
   }
 
   .fabric-hero::after {
@@ -570,12 +575,13 @@
     border-right: 1px solid var(--line-dark);
   }
 
-  .fabric-benefit:nth-child(3) {
+  .fabric-benefit:nth-child(even) {
     border-right: 0;
   }
 
-  .fabric-benefit:nth-child(n + 4) {
-    width: 50%;
+  .fabric-benefit:last-child {
+    width: 100%;
+    border-right: 0;
   }
 
   .process-row {
@@ -592,9 +598,9 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .fabric-highlight-card:nth-child(n + 4),
-  .style-card:nth-child(n + 4) {
-    transform: translateX(52%);
+  .fabric-highlight-card:last-child,
+  .style-card:last-child {
+    grid-column: 2;
   }
 
   .fabric-luxury-inner {
@@ -689,14 +695,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .fabric-highlight-card:nth-child(n + 4),
-  .style-card:nth-child(n + 4) {
-    transform: none;
-  }
-
   .fabric-highlight-card:last-child,
   .style-card:last-child {
-    transform: translateX(52%);
+    grid-column: 1 / -1;
   }
 
   .fabric-luxury-inner {
@@ -764,7 +765,8 @@
   }
 
   .fabric-hero-text {
-    font-size: 0.75rem;
+    font-size: 0.84rem;
+    line-height: 1.75;
   }
 
   .fabric-hero-actions,
@@ -793,11 +795,26 @@
 
   .fabric-highlight-card:last-child,
   .style-card:last-child {
+    grid-column: auto;
+  }
+
+  .fabric-highlight-card:last-child,
+  .style-card:last-child {
     transform: none;
   }
 
   .process-image {
     max-height: 240px;
+  }
+
+  .process-card p,
+  .fabric-benefit p,
+  .luxury-copy p,
+  .luxury-use p,
+  .cta-copy p,
+  .cta-contact-row span,
+  .cta-contact-row a {
+    font-size: 0.8rem;
   }
 
   .fabric-highlight-card figure {

@@ -2479,9 +2479,24 @@ a {
     padding: 24px 0;
 }
 
-.footer-bottom p {
-    color: rgba(255, 255, 255, 0.35);
+.site-footer .footer-bottom p {
+    color: rgba(255, 255, 255, 0.35) !important;
     font-size: 0.72rem;
+    font-weight: 400;
+}
+
+.footer-copyright a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.footer-copyright a:hover {
+    color: var(--white);
+}
+
+.footer-credit-separator {
+    margin: 0 8px;
+    color: rgba(255, 255, 255, 0.28);
 }
 
 .footer-policy-links {
